@@ -1,23 +1,2 @@
----
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
-
-// Inicializar el mapa después de que el DOM esté listo
-if (typeof window !== "undefined") {
-  document.addEventListener("DOMContentLoaded", () => {
-    const map = L.map("map").setView([51.505, -0.09], 13); // Coordenadas y zoom inicial
-
-    // Añadir una capa de tiles (por ejemplo, OpenStreetMap)
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
-    }).addTo(map);
-
-    // Añadir un marcador
-    L.marker([51.5, -0.09])
-      .addTo(map)
-      .bindPopup("¡Hola! Este es un marcador en Leaflet.");
-  });
-}
----
-
 <div id="map"></div>
+<p class="bg-red-800">hgola mundoi</p>
