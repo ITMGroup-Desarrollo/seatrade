@@ -1,3 +1,5 @@
+import usePort from "../hooks/use-port";
 export default function Pax() {
-  return <div>PAX</div>;
+  const pax = usePort((state) => state.port.pax);
+  return <div>PAX: {pax}</div>;
 }

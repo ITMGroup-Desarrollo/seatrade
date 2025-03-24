@@ -1,15 +1,10 @@
 import usePort from "../hooks/use-port";
 
 export default function Calls() {
-  const port = usePort((state) => state.port);
-  const increasePopulation = usePort((state) => state.increasePopulation);
-
+  const calls = usePort((state) => state.port.calls);
   return (
-    <>
-      <h2>{port} bears around here...</h2>
-      <button className="cursor-pointer" onClick={increasePopulation}>
-        one up
-      </button>
-    </>
+    <div>
+      <h2>Calls: {calls} </h2>
+    </div>
   );
 }

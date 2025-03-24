@@ -7,29 +7,27 @@ export default function Map() {
   const popup = document.getElementById("popup");
   const botonCerrarPopup = document.getElementById("cerrar-popup");
 
-  function changePort() {
-    port.increasePopulation();
-    console.log(port.port);
+  const changePort = (portId) => {
+    port.selectPort(portId);
+    // console.log(port.port);
+  };
 
-    // usePort((state) => state.increasePopulation);
-  }
+  // function mostrarPopup(titulo, mensaje) {
+  //   popupTitulo.textContent = titulo;
+  //   popupMensaje.textContent = mensaje;
+  //   popup.style.display = "flex";
+  // }
 
-  function mostrarPopup(titulo, mensaje) {
-    popupTitulo.textContent = titulo;
-    popupMensaje.textContent = mensaje;
-    popup.style.display = "flex";
-  }
+  // function ocultarPopup() {
+  //   popup.style.display = "none";
+  // }
 
-  function ocultarPopup() {
-    popup.style.display = "none";
-  }
-
-  botonCerrarPopup.addEventListener("click", ocultarPopup);
-  window.addEventListener("click", (event) => {
-    if (event.target === popup) {
-      ocultarPopup();
-    }
-  });
+  // botonCerrarPopup.addEventListener("click", ocultarPopup);
+  // window.addEventListener("click", (event) => {
+  //   if (event.target === popup) {
+  //     ocultarPopup();
+  //   }
+  // });
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +130,7 @@ export default function Map() {
             id="MX-ROO"
             d="M700.55,408.88l-.25-2.46,2.44-2.83.57-1.26-.28-4.7-.47-1.38.57-1.67-.82-.46.51-1.37-.15-.71-.99-1.24-.17-1.27.8-5.13-.22-2.52.41-.67,1.17-.66.18-5.85-3.41-4.67-5.3-4.25-1.34-1.81h0l.93-2,.33-1.46-.17-.87.56-.49,3.54-.17,1.39-1.39,2.43-1.05,2.43-.04,1.18-.41,1.92-1.78,1.08.92.3-.32-.27-.69,1.87-1.6,1.78-1.04,5.51-1.98.46-.47.79-2.37.51-.42h1s.93,1.69.93,1.69l.36-.05-.25-2.19,1.5-2.76,1.17-.56,1.14,1,1.54-.44,1.51.1,3.11-1.83,3.13-2.7,1.72-.82.86-1.17.27-1.58.86-1.08.48-2.46,1.15-2.05.1-.97-1.33-3.21.47-3.16.88-.86.13-.76-.33-5.31h0l1.33.09-.04.41.57.28.67-.32,2.09.59.33.39.65-.25,1.63.19.44.4.29-.53,2.71-.87.23-1.96-.63-.27.64-.78.46-.16.44.5,1.44.39.56.83.34-.16.54.45.05.79,1.58,2.18.97,4.05.43-.1.22-1.61.74-.67-.07-.9-.65-1.07.65.22.11,1.72-.64,1.63.4,1.16-.16,1.37.19.8,1.2.85-.69,2.49-.75.05-.31.71-1.27,4.05-1.18,1.14-1.11,1.59.04.49-1.15.68-.33.81-1.92,2.16-3.88,3.04-1.73,2.42-1.02,2.47-1.46,1.73-1.41,3.98v1.89s.63,1.93.63,1.93l.42.14.16,1.15-.58,1.37-.85.83.41-.93h.44s.56-1.32.56-1.32l-.06-.59-.62-.38.07,1.29-1.05,1.79-.77.28-.34-.38-.92.55-1.62,2.72-2.43.42-.19,1.9,1,.69.15.59.7-.34-.1.78.36.14-.25.71.58-.08.89-1.26,1.58-.34.6.65.82-.78-.27-.41,1.72-.22.54.8-.74,2.5-1.98,1.91-.47-.03.08-.79-2.46,1.48-.62,1.69v1.25l-.67.79.36.08-.06.74,1.4-.05,2.03-2.79.8-.38.45.17-.34,1.4.35-1.12.97-.08-2.21,2.63-.28,3.21-2.04,4.14-1.12,4.75-.9.96-.82,4.76-.45.9-.04,2.04-1.44,2.34-.56,3.33-.73-.54-.64.06.02-.68.56-.38-.12-.96-.41.1.4-1.48-.52-.3-.15-.62-.81-.24.19-1.03-2.62-.79-1.04-1.23.74-.46.34-2.04.93-1.7-.47-.53.38-1.24-.41-1.43-.73-.62.24-.91-.79-.29-2.26,3.58-1.09.38v.25s.99-.43.99-.43l-3.24,5.92-2.26.13-.21-.27-1.06.42-1.2-.28-.92.82-.88,3.01-1.06,1.13-.45,2.03-1.09,1.38-1.15,2.88-1.42.78-.58,1.42-1.62,1.31.11,1.6-.93-1.04-.91-.39-.63-.95-1.05.04-.96-1.16-1.8.39-1.27,1.2ZM751.29,312.4l-.21.54-2,1.2-1.46-.03-.56.38-.91-.52-.48-.76,1.72.56,1.4-.1,2.5-1.27Z"
             // onClick={mostrarPopup}
-            onClick={changePort}
+            onClick={() => changePort("costa-maya")}
           />
 
           <path
