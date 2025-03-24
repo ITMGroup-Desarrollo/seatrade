@@ -1,0 +1,14 @@
+{
+  "costa-maya": {
+    "name": "Costa Maya",
+    "country": "Mexico",
+    "latitude": 18.717,
+    "longitude": -87.713
+  },
+  "taino-bay": {
+    "name": "Taino Bay",
+    "country": "Dominican Republic",
+    "latitude": 19.75,
+    "longitude": -70.683
+  }
+}
