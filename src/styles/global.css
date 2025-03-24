@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@keyframes markerAnimation {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -8px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.icon-mark {
+  animation: markerAnimation 1.5s ease-in-out infinite;
+}
+
+.containerMap path,
+.containerMap polygon {
+  fill: #4990c8;
+  stroke: #20488a;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  stroke-opacity: 0.4;
+}
