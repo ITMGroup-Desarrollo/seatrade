@@ -1,15 +1,22 @@
 ---
 import Map from "./Map";
 import Logo from "./Logo";
+import BgMap from "../assets/images/bg-map.jpg";
 import Arrivals from "./Arrivals";
-import Pax from "./Pax";
 import Carousel from "./Carousel";
+import Popup from "./Popup";
 ---
 
-<div class="parent h-screen grid grid-rows-8 grid-cols-4">
-  <div class="map bg-blue-400 row-span-5 col-span-3"><Map /></div>
-  <div class="arrivals bg-blue-800 row-span-3 col-span-1"><Arrivals /></div>
-  <div class="pax bg-orange-500 row-span-2 col-span-1"><Pax /></div>
-  <div class="carousel bg-[#082970] row-span-5 col-span-3"><Carousel client:load /></div>
-  <div class="logo bg-[#082970] row-span-3 col-span-1"><Logo /></div>
+<div
+  class="parent h-screen grid grid-rows-8 grid-cols-4 bg-cover bg-center"
+  style={`background-image: url(${BgMap.src});`}
+>
+  <div class="map row-span-5 col-span-3 relative containerMap h-full w-full">
+    <Map client:only />
+    <Popup />
+  </div>
+  <div class="arrivals row-span-5 col-span-1 bg-red-500"><Arrivals /></div>
+  <div class="carousel row-span-3 col-span-4 bg-pink-500">
+    <Carousel />
+  </div>
 </div>
