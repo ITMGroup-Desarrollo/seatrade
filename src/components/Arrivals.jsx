@@ -1,3 +1,11 @@
+import Pax from "./Pax";
+import Calls from "./Calls";
+
 export default function Arrivals() {
-  return <div>ARRIVALS</div>;
+  return (
+    <div className="">
+      <Calls />
+      <Pax />
+    </div>
+  );
 }
