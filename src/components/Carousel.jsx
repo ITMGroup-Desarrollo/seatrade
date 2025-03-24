@@ -7,7 +7,7 @@ export default function Carousel() {
     if (typeof window !== "undefined") {
       new Swiper(".carrusel-container", {
         loop: true,
-        slidesPerView: 3,
+        slidesPerView: 5,
         autoplay: {
           delay: 3000,
           disableOnInteraction: false,
@@ -17,9 +17,9 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="grid grid-rows-1 grid-cols-4 h-full p-3">
-      <div className="text-white col-span-1 grid grid-cols-1 grid-rows-3 bg-[#233f80] h-full p-3 py-4 gap-2 rounded-l-xl">
-        <div className="row-span-1 bg-[#3a538c] grid grid-cols-2 grid-rows-1 rounded-xl">
+    <div className="grid grid-rows-1 grid-cols-12 h-full px-8 py-4">
+      <div className="text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[#233f80]/50  h-full py-4 pl-4 gap-2 rounded-l-xl">
+        <div className="row-span-1 bg-custom-gradient grid grid-cols-2 grid-rows-1 rounded-xl">
           <div className="col-span-1 justify-center self-center text-center rounded-xl h-full w-auto">
             <img
               src="src/assets/dominican-flag.svg"
@@ -31,7 +31,81 @@ export default function Carousel() {
             DOMINICAN REPUBLIC
           </div>
         </div>
-        <div className="row-span-1 bg-[#3a538c] grid grid-cols-2 grid-rows-1 rounded-xl">
+        <div className="row-span-1 flex items-center justify-center bg-custom-gradient h-full w-full rounded-xl p-4">
+          <img src="src/assets/logo-white.svg" alt="logo-taino" />
+        </div>
+      </div>
+      <div className="col-span-8 w-full bg-[#233f80]/50 h-full justify-baseline items-center flex p-6">
+        <div className="swiper carrusel-container h-full  rounded-xl bg-[#091e57]/80">
+          <div className="swiper-wrapper w-full  ">
+            <div className="swiper-slide h-full   flex items-center justify-center text-white text-xl font-bold ">
+              <div className="  h-full flex flex-col justify-center items-center  px-4 py4">
+                <img
+                  className="max-h-full w-full"
+                  src="src/assets/galery/galeryExample.png"
+                  alt="galeryexample"
+                />
+              </div>
+            </div>
+            <div className="swiper-slide h-full   flex items-center justify-center text-white text-xl font-bold ">
+              <div className="  h-full flex flex-col justify-center items-center  px-4 py4">
+                <img
+                  className="max-h-full w-full"
+                  src="src/assets/galery/galeryExample.png"
+                  alt="galeryexample"
+                />
+              </div>
+            </div>
+            <div className="swiper-slide h-full   flex items-center justify-center text-white text-xl font-bold ">
+              <div className="  h-full flex flex-col justify-center items-center  px-4 py4">
+                <img
+                  className="max-h-full w-full"
+                  src="src/assets/galery/galeryExample.png"
+                  alt="galeryexample"
+                />
+              </div>
+            </div>
+            <div className="swiper-slide h-full   flex items-center justify-center text-white text-xl font-bold ">
+              <div className="  h-full flex flex-col justify-center items-center  px-4 py4">
+                <img
+                  className="max-h-full w-full"
+                  src="src/assets/galery/galeryExample.png"
+                  alt="galeryexample"
+                />
+              </div>
+            </div>
+            <div className="swiper-slide h-full   flex items-center justify-center text-white text-xl font-bold ">
+              <div className="  h-full flex flex-col justify-center items-center  px-4 py4">
+                <img
+                  className="max-h-full w-full"
+                  src="src/assets/galery/galeryExample.png"
+                  alt="galeryexample"
+                />
+              </div>
+            </div>
+            <div className="swiper-slide h-full   flex items-center justify-center text-white text-xl font-bold ">
+              <div className="  h-full flex flex-col justify-center items-center  px-4 py4">
+                <img
+                  className="max-h-full w-full"
+                  src="src/assets/galery/galeryExample.png"
+                  alt="galeryexample"
+                />
+              </div>
+            </div>
+            <div className="swiper-slide h-full   flex items-center justify-center text-white text-xl font-bold ">
+              <div className="  h-full flex flex-col justify-center items-center  px-4 py4">
+                <img
+                  className="max-h-full w-full"
+                  src="src/assets/galery/galeryExample.png"
+                  alt="galeryexample"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[#233f80]/50 h-full pr-4 py-4 gap-2 rounded-r-xl">
+        <div className="row-span-1 bg-custom-gradient grid grid-cols-2 grid-rows-1 rounded-xl m-2">
           <div className="self-center text-center flex flex-row justify-center items-center">
             <img
               src="src/assets/instagram-white.svg"
@@ -46,62 +120,10 @@ export default function Carousel() {
             <p>9K</p>
           </div>
         </div>
-        <div className="row-span-1 bg-[#3a538c] rounded-xl flex items-center justify-center">
+        <div className="row-span-1 bg-custom-gradient rounded-xl flex items-center justify-center m-2">
           <a href="http://instagram.com/tainobayport/" target="_blank">
             <p className="text-3xl font-semibold">@TAINOBAYPORT</p>
           </a>
-        </div>
-      </div>
-      <div className="col-span-3 w-full">
-        <div className="swiper carrusel-container h-full rounded-r-xl">
-          <div className="swiper-wrapper w-full">
-            <div className="swiper-slide h-full bg-[#233f80] flex items-center justify-center text-white text-xl font-bold py-4 px-8">
-              <div className="bg-[#091e57]  h-full flex flex-col justify-center items-center rounded-xl px-4 py4">
-                <img
-                  className="max-h-full w-full"
-                  src="src/assets/galery/galeryExample.png"
-                  alt="galeryexample"
-                />
-              </div>
-            </div>
-            <div className="swiper-slide h-full bg-[#233f80] flex items-center justify-center text-white text-xl font-bold py-4 px-8">
-              <div className="bg-[#091e57]  h-full flex flex-col justify-center items-center rounded-xl px-4 py4">
-                <img
-                  className="max-h-full w-full"
-                  src="src/assets/galery/galeryExample.png"
-                  alt="galeryexample"
-                />
-              </div>
-            </div>
-            <div className="swiper-slide h-full bg-[#233f80] flex items-center justify-center text-white text-xl font-bold py-4 px-8">
-              <div className="bg-[#091e57]  h-full flex flex-col justify-center items-center rounded-xl px-4 py4">
-                <img
-                  className="max-h-full w-full"
-                  src="src/assets/galery/galeryExample.png"
-                  alt="galeryexample"
-                />
-              </div>
-            </div>
-            <div className="swiper-slide h-full bg-[#233f80] flex items-center justify-center text-white text-xl font-bold py-4 px-8">
-              <div className="bg-[#091e57]  h-full flex flex-col justify-center items-center rounded-xl px-4 py4">
-                <img
-                  className="max-h-full w-full"
-                  src="src/assets/galery/galeryExample.png"
-                  alt="galeryexample"
-                />
-              </div>
-            </div>
-            <div className="swiper-slide h-full bg-[#233f80] flex items-center justify-center text-white text-xl font-bold py-4 px-8 ">
-              <div className="bg-[#091e57]  h-full flex flex-col justify-center items-center rounded-xl px-4 py4">
-                <img
-                  className="max-h-full w-full"
-                  src="src/assets/galery/galeryExample.png"
-                  alt="galeryexample"
-                />
-              </div>
-            </div>
-            
-          </div>
         </div>
       </div>
     </div>

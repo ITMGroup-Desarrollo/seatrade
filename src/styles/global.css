@@ -26,3 +26,12 @@
   stroke-linejoin: round;
   stroke-opacity: 0.4;
 }
+.bg-custom-gradient {
+  background: linear-gradient(to right, 
+    #062457 5%, 
+    #234a8d 30%, 
+    #234a8d 50%, 
+    #234a8d 70%, 
+    #062457 95%
+  );
+}
