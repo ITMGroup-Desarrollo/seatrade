@@ -21,8 +21,12 @@
 .containerMap path,
 .containerMap polygon {
   fill: #4990c8;
+  stroke: #4990c8;
+}
+.containerMap path,
+.containerMap polygon {
   stroke: #20488a;
-  stroke-width: 0.5;
+  stroke-width: 1;
   stroke-linejoin: round;
-  stroke-opacity: 0.4;
+  /* stroke-opacity: 0.4; */
 }
