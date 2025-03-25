@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import Card from "./Card";
+import usePort from "../hooks/use-port";
+
 
 export default function Carousel() {
   useEffect(() => {
@@ -16,6 +18,10 @@ export default function Carousel() {
       });
     }
   }, []);
+  const instagram = usePort((state) => state.port.instagram);
+  const followers = usePort((state) => state.port.followers);
+  const country = usePort((state) => state.port.country);
+  const flag = usePort((state) => state.port.flag);
 
   return (
     <div className="grid grid-rows-1 grid-cols-12 h-full px-8 py-4">
@@ -23,13 +29,13 @@ export default function Carousel() {
         <Card className="row-span-1 grid grid-cols-2 grid-rows-1 ">
           <div className="col-span-1 justify-center self-center text-center rounded-xl h-full w-auto">
             <img
-              src="src/assets/dominican-flag.svg"
+              src={flag}
               alt="dominican-flag"
               className="h-full w-auto"
             />
           </div>
           <div className="col-span-1 justify-center self-center text-left text-lg font-semibold pl-3">
-            DOMINICAN REPUBLIC
+            {country}
           </div>
         </Card>
         <Card className="row-span-1 flex">
@@ -123,12 +129,12 @@ export default function Carousel() {
           </div>
 
           <div className="self-center text-center text-6xl justify-center flex mb-2 font-semibold z-10">
-            <p>10K</p>
+            <p>{followers}</p>
           </div>
         </Card>
 
         <Card className="row-span-1 flex">
-          <p className="text-3xl font-semibold">@TAINOBAYPORT</p>
+          <p className="text-3xl font-semibold">{instagram}</p>
         </Card>
       </div>
     </div>
