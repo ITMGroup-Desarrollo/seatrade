@@ -6,12 +6,18 @@
   }
 
   50% {
-    transform: translate(0px, -8px);
+    transform: translate(0px, -4px);
   }
 
   100% {
     transform: translate(0px, 0px);
   }
+}
+
+:root {
+  --color-blue-text: #54c0e8;
+  --color-secondary: #20488a;
+  --color-tertiary: #042256;
 }
 
 .icon-mark {
@@ -31,11 +37,12 @@
   /* stroke-opacity: 0.4; */
 }
 .bg-custom-gradient {
-  background: linear-gradient(to right, 
-    #042256 5%, 
-    #234a8e 30%, 
-    #234a8e 50%, 
-    #234a8e 70%, 
+  background: linear-gradient(
+    to right,
+    #042256 5%,
+    #234a8e 30%,
+    #234a8e 50%,
+    #234a8e 70%,
     #042256 95%
   );
 }
@@ -80,17 +87,16 @@
   transform: translate(-50%, -50%);
   z-index: 10;
   pointer-events: none;
-  
+
   /* Destello */
   background: white;
   filter: blur(8px);
-  box-shadow: 
-    0 0 10px 3px rgba(255, 255, 255, 0.8),
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.8),
     0 0 20px 10px rgba(255, 255, 255, 0.3);
-  
+
   /* Efecto de borde localizado */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -10px;
     left: -10px;
@@ -117,9 +123,6 @@
   pointer-events: none;
 }
 
-
-
-
 /* Elementos para la animación del borde */
 .box span {
   position: absolute;
@@ -144,7 +147,7 @@
 }
 
 .box span:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -169,4 +172,8 @@
     transform: scaleX(0);
     transform-origin: right;
   }
+}
+
+.line {
+  clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
 }

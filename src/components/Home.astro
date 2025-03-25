@@ -1,9 +1,11 @@
 ---
 import Map from "./Map";
-import BgMap from "../assets/images/bg-map.jpg";
 import Arrivals from "./Arrivals";
 import Carousel from "./Carousel";
 import Popup from "./Popup";
+import StaticInfoMap from "./StaticInfoMap";
+
+import BgMap from "../assets/images/bg-map.jpg";
 ---
 
 <div
@@ -12,6 +14,7 @@ import Popup from "./Popup";
 >
   <div class="map row-span-5 col-span-3 relative containerMap h-full w-full">
     <Map client:only />
+    <StaticInfoMap />
     <Popup />
   </div>
   <div class="arrivals row-span-5 col-span-1 bg-red-500">

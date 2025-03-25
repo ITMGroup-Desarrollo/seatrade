@@ -314,135 +314,165 @@ export default function Map() {
       </g>
       {/* Costa Maya */}
       <image
-        id="yucatan-btn"
+        id="costa-maya-mark"
         x="732"
-        y="305"
+        y="308"
         width="30"
         height="30"
         href="src\assets\images\mapMarker.svg"
         style={{ cursor: "pointer" }}
-        onClick={() => alert("Clic en Yucatán")}
-        onMouseEnter={(e) => e.target.setAttribute("opacity", "0.8")}
-        onMouseLeave={(e) => e.target.setAttribute("opacity", "1")}
+        onClick={() => changePort("costa-maya")}
+        className="icon-mark"
       />
       <image
-        id="yucatan-btn"
-        x="720"
+        id="costa-maya-logo"
+        x="718"
         y="258"
         width="60"
         height="60"
         href="src\assets\images\logo-costamaya.svg"
         style={{ cursor: "pointer" }}
-        onClick={() => alert("Clic en Yucatán")}
-        onMouseEnter={(e) => e.target.setAttribute("opacity", "0.8")}
-        onMouseLeave={(e) => e.target.setAttribute("opacity", "1")}
+        onClick={() => changePort("costa-maya")}
+
+        // onMouseEnter={(e) => e.target.setAttribute("opacity", "0.8")}
+        // onMouseLeave={(e) => e.target.setAttribute("opacity", "1")}
       />
 
       {/* roatan */}
       <image
+        id="roatan-mark"
         x="750"
         y="400"
         width="30"
         height="30"
         href="src\assets\images\mapMarker.svg"
+        onClick={() => changePort("roatan")}
         style={{ cursor: "pointer" }}
+        className="icon-mark"
       />
       <image
+        id="roatan-logo"
         x="745"
-        y="362"
+        y="358"
         width="40"
         height="40"
         href="src\assets\images\logo-roatan.svg"
+        onClick={() => changePort("roatan")}
         style={{ cursor: "pointer" }}
       />
 
       {/* Taino Bay */}
       <image
+        id="taino-bay-mark"
         x="914"
         y="255"
         width="30"
         height="30"
         href="src\assets\images\mapMarker.svg"
+        onClick={() => changePort("taino-bay")}
         style={{ cursor: "pointer" }}
+        className="icon-mark"
       />
       <image
+        id="taino-bay-logo"
         x="895"
         y="204"
         width="75"
         height="75"
         href="src\assets\images\logo-tainobay.svg"
+        onClick={() => changePort("taino-bay")}
         style={{ cursor: "pointer" }}
       />
 
       {/* Cabo Rojo */}
       <image
+        id="cabo-rojo-mark"
         x="900"
         y="270"
         width="30"
         height="30"
         href="src\assets\images\mapMarker.svg"
+        onClick={() => changePort("cabo-rojo")}
         style={{ cursor: "pointer" }}
+        className="icon-mark"
       />
       <image
+        id="cabo-rojo-logo"
         x="855"
         y="260"
         width="45"
         height="45"
         href="src\assets\images\logo-caborojo.png"
+        onClick={() => changePort("cabo-rojo")}
         style={{ cursor: "pointer" }}
       />
 
       {/* Samana */}
       <image
+        id="samana-mark"
         x="930"
         y="265"
         width="30"
         height="30"
         href="src\assets\images\mapMarker.svg"
+        onClick={() => changePort("samana")}
         style={{ cursor: "pointer" }}
+        className="icon-mark"
       />
       <image
+        id="samana-logo"
         x="960"
         y="242"
         width="75"
         height="75"
         href="src\assets\images\logo-samana.svg"
+        onClick={() => changePort("samana")}
         style={{ cursor: "pointer" }}
       />
 
       {/* La Paz */}
       <image
+        id="la-paz-mark"
         x="165"
         y="235"
         width="30"
         height="30"
         href="src\assets\images\mapMarker.svg"
+        onClick={() => changePort("la-paz")}
         style={{ cursor: "pointer" }}
+        className="icon-mark"
       />
       <image
+        id="la-paz-logo"
         x="115"
         y="220"
         width="55"
         height="55"
         href="src\assets\images\logo-lapaz.svg"
+        onClick={() => changePort("la-paz")}
         style={{ cursor: "pointer" }}
       />
 
       {/* La Baja */}
       <image
+        id="la-baja-mark"
         x="30"
         y="50"
         width="30"
         height="30"
         href="src\assets\images\mapMarker.svg"
+        onClick={() => changePort("la-baja")}
         style={{ cursor: "pointer" }}
+        className="icon-mark"
       />
       <image
+        id="la-baja-logo"
         x="-25"
         y="38"
         width="55"
         height="55"
         href="src\assets\images\logo-labaja.svg"
+        onClick={() => changePort("la-baja")}
         style={{ cursor: "pointer" }}
       />
     </svg>
