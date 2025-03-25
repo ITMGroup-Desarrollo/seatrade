@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 556.84 411.92">
+  <defs>
+    <clipPath id="clippath">
+      <path d="M475.01,17.15H185.77v.16c-.06-.09-.16-.16-.28-.16h-107.17C35.48,17.15.76,49.07.76,88.44v235.15c0,39.31,34.67,71.18,77.44,71.18h107.29c.13,0,.22-.07.28-.16v.16h292.76c42.83,0,77.55-31.92,77.55-71.29V91.68c0-41.16-36.3-74.53-81.08-74.53Z" style="fill: none;"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <ellipse cx="279.5" cy="205.89" rx="60.57" ry="60.68" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <g style="clip-path: url(#clippath);">
+    <g>
+      <rect x="185.51" width="185.59" height="411.92" style="fill: #fff;"/>
+      <g style="clip-path: url(#clippath-1);">
+        <image width="2560" height="1463" transform="translate(51.25 75.72) scale(.18)" xlink:href="../LA BAJA/México.webp"/>
+      </g>
+      <circle cx="277.94" cy="205.89" r="161.02" style="fill: none;"/>
+      <path d="M372.16,0h170.77c7.68,0,13.91,6.23,13.91,13.91v385.01c0,7.17-5.83,13-13,13h-171.68c-.5,0-.91-.41-.91-.91V.91c0-.5.41-.91.91-.91Z" style="fill: #ce1226;"/>
+      <path d="M13,0h172.5c.05,0,.09.04.09.09v411.73c0,.05-.04.09-.09.09H12.97c-7.16,0-12.97-5.81-12.97-12.97V13C0,5.83,5.83,0,13,0Z" style="fill: #006847;"/>
+    </g>
+  </g>
+</svg>

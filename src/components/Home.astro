@@ -9,18 +9,18 @@ import BgMap from "../assets/images/bg-map.jpg";
 ---
 
 <div
-  class="parent h-screen grid grid-rows-8 grid-cols-4 bg-cover bg-center"
+  class="parent h-screen grid grid-rows-8 grid-cols-16 bg-cover bg-center"
   style={`background-image: url(${BgMap.src});`}
 >
-  <div class="map row-span-5 col-span-3 relative containerMap h-full w-full">
+  <div class="map row-span-5 col-span-13 relative containerMap h-full w-full">
     <Map client:only />
     <StaticInfoMap />
     <Popup />
   </div>
-  <div class="arrivals row-span-5 col-span-1 bg-red-500">
+  <div class="arrivals row-span-5 col-span-3 bg-transparent">
     <Arrivals client:only />
   </div>
-  <div class="carousel row-span-3 col-span-4 bg-transparent">
+  <div class="carousel row-span-3 col-span-16 bg-transparent">
     <Carousel client:load />
   </div>
 </div>
