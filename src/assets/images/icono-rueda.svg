@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 510 501">
+  <defs>
+    <filter id="outer-glow-1" x="0" y="0" width="510" height="501" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="3"/>
+      <feFlood flood-color="aqua" flood-opacity=".9"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path d="M408.26,438.21c105.99-84.51,123.47-239.5,38.96-345.49-15.34-19.23-33.01-35.51-52.28-48.83l-30.61,44.94c14.87,10.33,28.52,22.92,40.37,37.79,65.82,82.55,52.21,203.26-30.34,269.08-82.55,65.82-203.26,52.21-269.08-30.34-65.82-82.55-52.21-203.26,30.34-269.08,22.14-17.65,47.04-29.54,72.88-35.97l-19.18-51.21c-31.03,8.56-60.87,23.36-87.59,44.67C-4.26,138.28-21.73,293.26,62.78,399.25c84.51,105.99,239.5,123.47,345.48,38.96Z" style="fill: aqua; filter: url(#outer-glow-1);"/>
+  <path d="M364.34,88.83l30.61-44.94C334.82,2.3,259.05-10.13,189.32,9.1l19.18,51.21c53.15-13.22,110.28-3.14,155.83,28.52Z" style="fill: #007297;"/>
+</svg>

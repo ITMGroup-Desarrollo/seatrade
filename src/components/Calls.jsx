@@ -4,7 +4,7 @@ export default function Calls() {
   const calls = usePort((state) => state.port.calls);
   return (
     <div>
-      <h2>Calls: {calls} </h2>
+      <h2>{calls} </h2>
     </div>
   );
 }
