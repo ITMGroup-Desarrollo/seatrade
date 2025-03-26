@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import Card from "./Card";
@@ -7,11 +7,16 @@ import usePort from "../hooks/use-port";
 import logoInstagram from "../assets/instagram-white.svg";
 
 export default function Carousel() {
-  const slides = usePort((state) => state.port.slides); // Obtiene el estado
+  const slides = usePort((state) => state.port.slides);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     if (typeof window !== "undefined" && slides) {
-      new Swiper(".carrusel-container", {
+      if (swiperRef.current) {
+        swiperRef.current.destroy(true, true);
+      }
+
+      swiperRef.current = new Swiper(".carrusel-container", {
         loop: true,
         slidesPerView: slides,
         autoplay: {
@@ -20,7 +25,13 @@ export default function Carousel() {
         },
       });
     }
+    return () => {
+      if (swiperRef.current) {
+        swiperRef.current.destroy(true, true);
+      }
+    };
   }, [slides]);
+  
   const instagram = usePort((state) => state.port.instagram);
   const followers = usePort((state) => state.port.followers);
   const country = usePort((state) => state.port.country);
@@ -46,11 +57,9 @@ export default function Carousel() {
           <img className="h-2/3" src={logo} alt="logo-taino" />
         </Card>
       </div>
-      <div
-        className={`col-span-8 rounded-r-xl w-full bg-[#233f80]/50 h-full justify-baseline items-center flex p-6 ${galleryClass} `}
-      >
-        <div className="swiper carrusel-container h-full  rounded-xl bg-[#091e57]/80 drop-shadow-[2px_4px_6px_black]">
-          <div className="swiper-wrapper w-full ">
+      <div className={`col-span-8  w-full bg-[#233f80]/50 h-full justify-baseline items-center flex p-6 ${galleryClass}`}>
+        <div className="swiper carrusel-container h-full  rounded-xl bg-[#091e57]/80">
+          <div className="swiper-wrapper w-full">
             {gallery.map((image, index) => (
               <div
                 key={index}
@@ -76,7 +85,7 @@ export default function Carousel() {
             <img
               src={logoInstagram.src}
               alt="instagram"
-              className="w-16 ml-6"
+              className="w-16 ml-4"
             />
             <p className="text-5xl font-thin opacity-70 self-center mb-3 ml-6">
               |
