@@ -4,6 +4,8 @@ import "swiper/css/bundle";
 import Card from "./Card";
 import usePort from "../hooks/use-port";
 
+import logoInstagram from "../assets/instagram-white.svg";
+
 export default function Carousel() {
   const slides = usePort((state) => state.port.slides); // Obtiene el estado
 
@@ -72,7 +74,7 @@ export default function Carousel() {
         <Card className="row-span-1 grid grid-cols-2 grid-rows-1">
           <div className="self-center text-center flex flex-row justify-center items-center z-10">
             <img
-              src="src/assets/instagram-white.svg"
+              src={logoInstagram.src}
               alt="instagram"
               className="w-16 ml-6"
             />
