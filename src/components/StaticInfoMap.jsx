@@ -3,10 +3,10 @@ import Separador from "./Separador";
 import happyIcon from "../assets/images/icon-happy.svg";
 export default function StaticInfoMap() {
   return (
-    <div class="px-8 flex absolute bottom-0 w-full justify-around">
-      <Card className=" flex">
+    <div class="pl-8 flex absolute bottom-0 w-full justify-around">
+      <Card className=" flex w-2/4 mr-10">
         <div class="flex items-center">
-          <div class="text-5xl mr-2 text-white font-bold">15,412</div>
+          <div class="text-5xl mr-2 text-white font-bold">1,646</div>
           <div class="flex flex-col uppercase font-bold mt-1">
             <span class="text-sm text-[var(--color-blue-text)] leading-none">
               Total
@@ -20,7 +20,7 @@ export default function StaticInfoMap() {
         <Separador />
 
         <div class="flex items-center">
-          <div class="text-5xl mr-2 text-white font-bold">62,655,524</div>
+          <div class="text-5xl mr-2 text-white font-bold">6,358,445</div>
           <div class="flex flex-col uppercase font-bold mt-1">
             <span class="text-sm text-[var(--color-blue-text)] leading-none">
               Total
@@ -31,7 +31,7 @@ export default function StaticInfoMap() {
           </div>
         </div>
       </Card>
-      <Card className=" flex">
+      <Card className=" flex w-1/4 mr-10">
         <div class="flex items-center">
           <div class="text-5xl mr-2 text-white font-bold">7</div>
           <div class="flex flex-col uppercase font-bold mt-1">
@@ -39,7 +39,7 @@ export default function StaticInfoMap() {
               cruise port
             </span>
             <span class="text-sm text-[var(--color-blue-text)] leading-none">
-              destination
+              destinations
             </span>
           </div>
         </div>
@@ -50,12 +50,12 @@ export default function StaticInfoMap() {
           <div class="text-5xl mr-2 text-white font-bold">3</div>
           <div class="flex flex-col uppercase font-bold mt-1">
             <span class="text-sm text-[var(--color-blue-text)] leading-none">
-              countrys
+              countries
             </span>
           </div>
         </div>
       </Card>
-      <Card className=" flex">
+      <Card className=" flex w-1/4">
         <div class="flex items-center">
           <div class="text-5xl mr-2 text-white font-bold">
             <img

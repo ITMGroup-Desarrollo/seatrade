@@ -2,7 +2,7 @@ import usePort from "../hooks/use-port";
 
 import mapMarker from "../assets/MapMarkerWhite.svg";
 import logoCostamaya from "../assets/images/logo-costamaya.svg";
-import logoCaboRojo from "../assets/images/logo-caborojo.png";
+import logoCaboRojo from "../assets/images/logo-caborojo.svg";
 import logoRoatan from "../assets/images/logo-roatan.svg";
 import logoTainobay from "../assets/images/logo-tainobay.svg";
 import logoSamana from "../assets/images/logo-samana.svg";
