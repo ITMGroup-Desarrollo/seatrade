@@ -25,7 +25,7 @@ export default function Carousel() {
   const flag = usePort((state) => state.port.flag);
   const logo = usePort((state) => state.port.logo);
   const gallery = usePort((state) => state.port.gallery);
-  
+
   const galleryClass = usePort((state) => state.port.galleryClass);
   const socialDisplay = usePort((state) => state.port.socialDisplay);
 
@@ -44,9 +44,11 @@ export default function Carousel() {
           <img className="h-2/3" src={logo} alt="logo-taino" />
         </Card>
       </div>
-      <div className={`col-span-8 rounded-r-xl w-full bg-[#233f80]/50 h-full justify-baseline items-center flex p-6 ${galleryClass}`}>
-        <div className="swiper carrusel-container h-full  rounded-xl bg-[#091e57]/80">
-          <div className="swiper-wrapper w-full">
+      <div
+        className={`col-span-8 rounded-r-xl w-full bg-[#233f80]/50 h-full justify-baseline items-center flex p-6 ${galleryClass} `}
+      >
+        <div className="swiper carrusel-container h-full  rounded-xl bg-[#091e57]/80 drop-shadow-[2px_4px_6px_black]">
+          <div className="swiper-wrapper w-full ">
             {gallery.map((image, index) => (
               <div
                 key={index}
@@ -64,7 +66,9 @@ export default function Carousel() {
           </div>
         </div>
       </div>
-      <div className={`text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[#233f80]/50 h-full pr-4 py-4 gap-2 rounded-r-xl ${socialDisplay}`}>
+      <div
+        className={`text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[#233f80]/50 h-full pr-4 py-4 gap-2 rounded-r-xl ${socialDisplay}`}
+      >
         <Card className="row-span-1 grid grid-cols-2 grid-rows-1">
           <div className="self-center text-center flex flex-row justify-center items-center z-10">
             <img

@@ -2,7 +2,7 @@ import Card from "./Card";
 import Separador from "./Separador";
 export default function StaticInfoMap() {
   return (
-    <div class="px-8 flex absolute bottom-0 w-full">
+    <div class="px-8 flex absolute bottom-0 w-full justify-around">
       <Card className=" flex">
         <div class="flex items-center">
           <div class="text-5xl mr-2 text-white font-bold">15,412</div>

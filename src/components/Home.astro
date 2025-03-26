@@ -5,7 +5,10 @@ import Carousel from "./Carousel";
 import Popup from "./Popup";
 import StaticInfoMap from "./StaticInfoMap";
 
+import { Image } from "astro:assets";
+
 import BgMap from "../assets/images/bg-map.jpg";
+import LogoITM from "../assets/images/logo-itm.svg";
 ---
 
 <div
@@ -13,6 +16,21 @@ import BgMap from "../assets/images/bg-map.jpg";
   style={`background-image: url(${BgMap.src});`}
 >
   <div class="map row-span-5 col-span-13 relative containerMap h-full w-full">
+    <div class="absolute top-5 w-full">
+      <p
+        class="text-white text-5xl uppercase font-bold text-center drop-shadow-[2px_4px_6px_black]"
+      >
+        FROM <span
+          ><Image
+            src={LogoITM}
+            alt="Logo ITM Group"
+            width={140}
+            height={140}
+            class="inline-block"
+          /></span
+        >TO THE WORD
+      </p>
+    </div>
     <Map client:only />
     <StaticInfoMap />
     <Popup />
