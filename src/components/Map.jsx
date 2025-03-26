@@ -1,5 +1,14 @@
 import usePort from "../hooks/use-port";
 
+import mapMarker from "../assets/MapMarkerWhite.svg";
+import logoCostamaya from "../assets/images/logo-costamaya.svg";
+import logoCaboRojo from "../assets/images/logo-caborojo.png";
+import logoRoatan from "../assets/images/logo-roatan.svg";
+import logoTainobay from "../assets/images/logo-tainobay.svg";
+import logoSamana from "../assets/images/logo-samana.svg";
+import logoLaPaz from "../assets/images/logo-lapaz.svg";
+import logoLaBaja from "../assets/images/logo-labaja.svg";
+
 export default function Map() {
   const port = usePort();
   const popupTitulo = document.getElementById("popup-titulo");
@@ -319,7 +328,7 @@ export default function Map() {
         y="308"
         width="30"
         height="30"
-        href="src\assets\images\mapMarker.svg"
+        href={mapMarker.src}
         style={{ cursor: "pointer" }}
         onClick={() => changePort("costa-maya")}
         className="icon-mark"
@@ -330,7 +339,7 @@ export default function Map() {
         y="258"
         width="60"
         height="60"
-        href="src\assets\images\logo-costamaya.svg"
+        href={logoCostamaya.src}
         style={{ cursor: "pointer" }}
         onClick={() => changePort("costa-maya")}
 
@@ -345,7 +354,7 @@ export default function Map() {
         y="400"
         width="30"
         height="30"
-        href="src\assets\images\mapMarker.svg"
+        href={mapMarker.src}
         onClick={() => changePort("roatan")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
@@ -356,7 +365,7 @@ export default function Map() {
         y="358"
         width="40"
         height="40"
-        href="src\assets\images\logo-roatan.svg"
+        href={logoRoatan.src}
         onClick={() => changePort("roatan")}
         style={{ cursor: "pointer" }}
       />
@@ -368,7 +377,7 @@ export default function Map() {
         y="255"
         width="30"
         height="30"
-        href="src\assets\images\mapMarker.svg"
+        href={mapMarker.src}
         onClick={() => changePort("taino-bay")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
@@ -379,7 +388,7 @@ export default function Map() {
         y="204"
         width="75"
         height="75"
-        href="src\assets\images\logo-tainobay.svg"
+        href={logoTainobay.src}
         onClick={() => changePort("taino-bay")}
         style={{ cursor: "pointer" }}
       />
@@ -391,7 +400,7 @@ export default function Map() {
         y="270"
         width="30"
         height="30"
-        href="src\assets\images\mapMarker.svg"
+        href={mapMarker.src}
         onClick={() => changePort("cabo-rojo")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
@@ -402,7 +411,7 @@ export default function Map() {
         y="260"
         width="45"
         height="45"
-        href="src\assets\images\logo-caborojo.png"
+        href={logoCaboRojo.src}
         onClick={() => changePort("cabo-rojo")}
         style={{ cursor: "pointer" }}
       />
@@ -414,7 +423,7 @@ export default function Map() {
         y="265"
         width="30"
         height="30"
-        href="src\assets\images\mapMarker.svg"
+        href={mapMarker.src}
         onClick={() => changePort("samana")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
@@ -425,7 +434,7 @@ export default function Map() {
         y="242"
         width="75"
         height="75"
-        href="src\assets\images\logo-samana.svg"
+        href={logoSamana.src}
         onClick={() => changePort("samana")}
         style={{ cursor: "pointer" }}
       />
@@ -437,7 +446,7 @@ export default function Map() {
         y="235"
         width="30"
         height="30"
-        href="src\assets\images\mapMarker.svg"
+        href={mapMarker.src}
         onClick={() => changePort("la-paz")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
@@ -448,7 +457,7 @@ export default function Map() {
         y="220"
         width="55"
         height="55"
-        href="src\assets\images\logo-lapaz.svg"
+        href={logoLaPaz.src}
         onClick={() => changePort("la-paz")}
         style={{ cursor: "pointer" }}
       />
@@ -460,7 +469,7 @@ export default function Map() {
         y="50"
         width="30"
         height="30"
-        href="src\assets\images\mapMarker.svg"
+        href={mapMarker.src}
         onClick={() => changePort("la-baja")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
@@ -471,7 +480,7 @@ export default function Map() {
         y="38"
         width="55"
         height="55"
-        href="src\assets\images\logo-labaja.svg"
+        href={logoLaBaja.src}
         onClick={() => changePort("la-baja")}
         style={{ cursor: "pointer" }}
       />

@@ -1,5 +1,6 @@
 import Card from "./Card";
 import Separador from "./Separador";
+import happyIcon from "../assets/images/icon-happy.svg";
 export default function StaticInfoMap() {
   return (
     <div class="px-8 flex absolute bottom-0 w-full justify-around">
@@ -58,9 +59,10 @@ export default function StaticInfoMap() {
         <div class="flex items-center">
           <div class="text-5xl mr-2 text-white font-bold">
             <img
-              src="src\assets\images\icon-happy.svg"
+              src={happyIcon.src}
               width={45}
               alt="Happy Icon"
+              className="drop-shadow-[0_0_5px_#54c0e8]"
             />
           </div>
           <div>
