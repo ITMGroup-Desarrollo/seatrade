@@ -199,52 +199,33 @@ color: var(--color-fourth);
   background-size: 200% 100%;
   animation: gradientBorder 2s infinite alternate ease-in-out;
 }
-@keyframes borderClockwise {
-  0% {
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-image: linear-gradient(to right, white 0%, transparent 100%) 1;
+@keyframes borderFlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 0 2px transparent, /* Borde real (invisible) */
+      0 -1px 0 1px white;    /* Efecto de luz (arriba) */
   }
   25% {
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-image: linear-gradient(to right, white 0%, transparent 100%) 1;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, transparent, white, transparent);
+    box-shadow: 
+      0 0 0 2px transparent,
+      1px 0 0 1px white;     /* Efecto de luz (derecha) */
   }
   50% {
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-image: linear-gradient(to bottom, white 0%, transparent 100%) 1;
+    box-shadow: 
+      0 0 0 2px transparent,
+      0 1px 0 1px white;     /* Efecto de luz (abajo) */
   }
   75% {
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-image: linear-gradient(to left, white 0%, transparent 100%) 1;
-  }
-  100% {
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-image: linear-gradient(to top, white 0%, transparent 100%) 1;
+    box-shadow: 
+      0 0 0 2px transparent,
+      -1px 0 0 1px white;    /* Efecto de luz (izquierda) */
   }
 }
 
 .card {
   position: relative;
   padding: 1rem;
-  border-width: 2px;
-  border-style: solid;
-  border-color: transparent;
-  border-image-slice: 1;
-  animation: borderClockwise 4s infinite;
+  border: 2px solid var(--color-fifth-border); /* Borde estático */
+  border-radius: 0.75rem; /* rounded-xl */
+  animation: borderFlow 3s ease-in-out infinite; /* Más suave con ease-in-out */
 }
