@@ -9,7 +9,7 @@ export default function Arrivals() {
   return (
     <div
       className={`father h-full px-8 mr-8 py-4 ${
-        !calls || calls.length === 0 ? "hidden" : ""
+        !calls || calls.length === 0 ? "hidden" : "block"
       }`}
     >
       <div className="grid grid-rows-5 h-full rounded-xl bg-[#233f80]/50 border-2 border-[#38568e] gap-2">
