@@ -1,6 +1,7 @@
+import { useEffect, useRef } from "react";
 import usePort from "../hooks/use-port";
 
-import mapMarker from "../assets/MapMarkerWhite.svg";
+import mapMarker from "../assets/mapMarker.svg";
 import logoCostamaya from "../assets/images/logo-costamaya.svg";
 import logoCaboRojo from "../assets/images/logo-caborojo.svg";
 import logoRoatan from "../assets/images/logo-roatan.svg";
@@ -11,32 +12,29 @@ import logoLaBaja from "../assets/images/logo-labaja.svg";
 
 export default function Map() {
   const port = usePort();
-  const popupTitulo = document.getElementById("popup-titulo");
-  const popupMensaje = document.getElementById("popup-mensaje");
   const popup = document.getElementById("popup");
   const botonCerrarPopup = document.getElementById("cerrar-popup");
 
   const changePort = (portId) => {
     port.selectPort(portId);
+    mostrarPopup();
     // console.log(port.port);
   };
 
-  // function mostrarPopup(titulo, mensaje) {
-  //   popupTitulo.textContent = titulo;
-  //   popupMensaje.textContent = mensaje;
-  //   popup.style.display = "flex";
-  // }
+  function mostrarPopup() {
+    popup.style.display = "flex";
+  }
 
-  // function ocultarPopup() {
-  //   popup.style.display = "none";
-  // }
+  function ocultarPopup() {
+    popup.style.display = "none";
+  }
 
-  // botonCerrarPopup.addEventListener("click", ocultarPopup);
-  // window.addEventListener("click", (event) => {
-  //   if (event.target === popup) {
-  //     ocultarPopup();
-  //   }
-  // });
+  botonCerrarPopup.addEventListener("click", ocultarPopup);
+  window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      ocultarPopup();
+    }
+  });
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
