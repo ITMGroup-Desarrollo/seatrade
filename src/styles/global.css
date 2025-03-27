@@ -182,50 +182,69 @@ color: var(--color-fourth);
 .line {
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
 }
-@keyframes gradientBorder {
+@keyframes gradientBorder2 {
   0% {
-    background-position: 20% 0;
-  }
-  50% {
-    background-position: 0% 0;
+    background-position: -100% 0; 
   }
   100% {
-    background-position: 80% 0;
+    background-position: 100% 0; 
   }
 }
 
 .animated-border {
   background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
   background-size: 200% 100%;
-  animation: gradientBorder 2s infinite alternate ease-in-out;
+  animation: gradientBorder2 2s linear infinite; /* Usamos linear para un movimiento constante */
 }
-@keyframes borderFlow {
-  0%, 100% {
-    box-shadow: 
-      0 0 0 2px transparent, /* Borde real (invisible) */
-      0 -1px 0 1px white;    /* Efecto de luz (arriba) */
-  }
-  25% {
-    box-shadow: 
-      0 0 0 2px transparent,
-      1px 0 0 1px white;     /* Efecto de luz (derecha) */
-  }
-  50% {
-    box-shadow: 
-      0 0 0 2px transparent,
-      0 1px 0 1px white;     /* Efecto de luz (abajo) */
-  }
-  75% {
-    box-shadow: 
-      0 0 0 2px transparent,
-      -1px 0 0 1px white;    /* Efecto de luz (izquierda) */
-  }
+
+/* @keyframes borderFlow {
+  0%, 100% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
+  5% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
+  10% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
+  15% { box-shadow: 0 0 0 2px transparent, 0.8px -0.6px 0 1px rgba(255, 255, 255, 0.87); }
+  20% { box-shadow: 0 0 0 2px transparent, 1px 0 0 1px rgba(255, 255, 255, 0.9); }
+  25% { box-shadow: 0 0 0 2px transparent, 0.9px 0.3px 0 1px rgba(255, 255, 255, 0.88); }
+  30% { box-shadow: 0 0 0 2px transparent, 0.8px 0.6px 0 1px rgba(255, 255, 255, 0.85); }
+  35% { box-shadow: 0 0 0 2px transparent, 0.6px 0.8px 0 1px rgba(255, 255, 255, 0.83); }
+  40% { box-shadow: 0 0 0 2px transparent, 0 1px 0 1px rgba(255, 255, 255, 0.8); }
+  45% { box-shadow: 0 0 0 2px transparent, -0.3px 0.9px 0 1px rgba(255, 255, 255, 0.78); }
+  50% { box-shadow: 0 0 0 2px transparent, -0.6px 0.8px 0 1px rgba(255, 255, 255, 0.75); }
+  55% { box-shadow: 0 0 0 2px transparent, -0.8px 0.6px 0 1px rgba(255, 255, 255, 0.73); }
+  60% { box-shadow: 0 0 0 2px transparent, -1px 0 0 1px rgba(255, 255, 255, 0.7); }
+  65% { box-shadow: 0 0 0 2px transparent, -0.9px -0.3px 0 1px rgba(255, 255, 255, 0.72); }
+  70% { box-shadow: 0 0 0 2px transparent, -0.8px -0.6px 0 1px rgba(255, 255, 255, 0.75); }
+  75% { box-shadow: 0 0 0 2px transparent, -0.6px -0.8px 0 1px rgba(255, 255, 255, 0.77); }
+  80% { box-shadow: 0 0 0 2px transparent, 0 -1px 0 1px rgba(255, 255, 255, 0.8); }
+  85% { box-shadow: 0 0 0 2px transparent, 0.2px -0.95px 0 1px rgba(255, 255, 255, 0.82); }
+  90% { box-shadow: 0 0 0 2px transparent, 0.5px -0.9px 0 1px rgba(255, 255, 255, 0.85); }
+  95% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
+} */
+
+@keyframes gradientBorder {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
 }
 
 .card {
   position: relative;
   padding: 1rem;
-  border: 2px solid var(--color-fifth-border); /* Borde estático */
-  border-radius: 0.75rem; /* rounded-xl */
-  animation: borderFlow 3s ease-in-out infinite; /* Más suave con ease-in-out */
+  border: none;
+  border-radius: 0.75rem;
+  /* animation: borderFlow 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite; */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* Cubre el borde del .card */
+  border-radius: 0.75rem;
+  background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
+  background-size: 200% 100%;
+  animation: gradientBorder 2s linear infinite;
+  z-index: -1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  padding: 2px; /* Grosor del borde */
 }
