@@ -1,6 +1,8 @@
 import Pax from "./Pax";
 import Calls from "./Calls";
 import usePort from "../hooks/use-port";
+import CallsIcon from "../assets/images/icon-calls.svg";
+import PaxIcon from "../assets/images/icon-pax.svg";
 
 export default function Arrivals() {
   const name = usePort((state) => state.port.name);
@@ -12,17 +14,16 @@ export default function Arrivals() {
         !calls || calls.length === 0 ? "hidden" : "block"
       }`}
     >
-      <div className="grid grid-rows-5 h-full rounded-xl bg-[#233f80]/50 border-2 border-[#38568e] gap-2">
+      <div className="grid grid-rows-5 h-full rounded-xl bg-[var(--color-secondary)]/50 border-2 border-[var(--color-fifth-border)] gap-2">
         <div className="row-span-1 text-white text-xl font-bold uppercase content-center text-center">
           Arrivals&nbsp;in <br /> {name}
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
-          <div className="relative row-span-2 flex justify-center items-center">
-            <img
-              src="src/assets/images/icono-calls.svg"
-              alt="calls"
-              className="w-12 z-10"
-            />
+          <div className="relative row-span-2 flex justify-center items-center text-center">
+            <div>
+              <img src={CallsIcon.src} alt="calls" className="w-12 z-10" />
+              <p className="textArrivals font-medium">CALLS</p>
+            </div>
             <img
               src="src/assets/images/icono-rueda.svg"
               alt="rueda"
@@ -30,17 +31,17 @@ export default function Arrivals() {
             />
           </div>
 
-          <div className="row-span-1 text-center content-center text-white font-bold text-5xl">
+          <div className="row-span-1 text-center content-center text-white font-bold text-5xl ">
+            
             <Calls />
           </div>
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
-        <div className="relative row-span-2 flex justify-center items-center">
-            <img
-              src="src/assets/images/icono-pax.svg"
-              alt="calls"
-              className="w-8 z-10"
-            />
+          <div className="relative row-span-2 flex justify-center items-center text-center">
+            <div>
+              <img src={PaxIcon.src} alt="Pax" className="w-12 z-10" />
+              <p className="textArrivals font-medium">PAX</p>
+            </div>
             <img
               src="src/assets/images/icono-rueda.svg"
               alt="rueda"
