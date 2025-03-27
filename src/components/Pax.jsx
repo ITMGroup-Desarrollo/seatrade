@@ -1,5 +1,12 @@
 import usePort from "../hooks/use-port";
+import AnimatedNumber from "../components/AnimatedNumber";
+
 export default function Pax() {
   const pax = usePort((state) => state.port.pax);
-  return <div>{pax}</div>;
+
+  return (
+    <div>
+      <h2><AnimatedNumber value={pax} duration={500} /></h2>
+    </div>
+  );
 }
