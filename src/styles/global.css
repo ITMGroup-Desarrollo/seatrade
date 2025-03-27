@@ -182,3 +182,69 @@ color: var(--color-fourth);
 .line {
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
 }
+@keyframes gradientBorder {
+  0% {
+    background-position: 20% 0;
+  }
+  50% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 80% 0;
+  }
+}
+
+.animated-border {
+  background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
+  background-size: 200% 100%;
+  animation: gradientBorder 2s infinite alternate ease-in-out;
+}
+@keyframes borderClockwise {
+  0% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(to right, white 0%, transparent 100%) 1;
+  }
+  25% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(to right, white 0%, transparent 100%) 1;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, transparent, white, transparent);
+  }
+  50% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(to bottom, white 0%, transparent 100%) 1;
+  }
+  75% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(to left, white 0%, transparent 100%) 1;
+  }
+  100% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(to top, white 0%, transparent 100%) 1;
+  }
+}
+
+.card {
+  position: relative;
+  padding: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-image-slice: 1;
+  animation: borderClockwise 4s infinite;
+}
