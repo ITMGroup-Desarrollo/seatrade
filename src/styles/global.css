@@ -16,8 +16,13 @@
 
 :root {
   --color-blue-text: #54c0e8;
-  --color-secondary: #20488a;
+  --color-secondary: #234a8e;
   --color-tertiary: #042256;
+  --color-fourth: #00ffff;
+  --color-fifth-border: #38568e;
+}
+.textArrivals{
+color: var(--color-fourth);
 }
 
 .icon-mark {
