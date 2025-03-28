@@ -25,9 +25,7 @@ export default function Arrivals() {
               <img src={CallsIcon.src} alt="calls" className="w-12 z-10" />
               <p className="textArrivals font-medium">CALLS</p>
             </div>
-            <div className="absolute bottom-full left-1/6 transform -translate-x-1/2 -translate-y-1/3">
-              <Rueda />
-            </div>
+             <Rueda className="calls-container"/>
           </div>
 
           <div className="row-span-1 text-center content-center text-white font-bold text-5xl ">
@@ -35,16 +33,12 @@ export default function Arrivals() {
           </div>
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
-          <div className="relative row-span-2 flex justify-center items-center text-center">
+          <div className="pax-Container relative row-span-2 flex justify-center items-center text-center">
             <div>
               <img src={PaxIcon.src} alt="Pax" className="w-12 z-10" />
               <p className="textArrivals font-medium">PAX</p>
             </div>
-            <img
-              src="src/assets/images/icono-rueda.svg"
-              alt="rueda"
-              className="absolute w-36 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            />
+            <Rueda className="pax-container" />
           </div>
           <div className="row-span-1 text-center content-center text-white font-semibold text-3xl">
             <Pax />

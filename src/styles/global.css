@@ -140,133 +140,72 @@
   mask-composite: exclude;
   padding: 2px; /* Grosor del borde */
 }
-.html + svg .outer {
-  stroke: #e34f26;
-}
-
-
-
-.chart svg {
+.Loader,.segment-right, .segment-bottom, .segment-left , .segment-top{
   position: absolute;
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border-radius: 50%;
 }
-
-.outer {
-  fill: transparent;
-  stroke: #333;
-  stroke-width: 20;
-  stroke-dasharray: 534;
-  transition: stroke-dashoffset 1s;
-  -webkit-animation-play-state: running;
+.Loader{
+  border: solid 1rem #007297;
+}
+.segment-right, .segment-bottom, .segment-left, .segment-top{
+  border: solid 1rem transparent;
+  border-right-color: aqua;
+  animation: showBorder 1s linear ;
+  animation-fill-mode: forwards;
   
-  /* firefox bug fix - won't rotate at 90deg angles */
-  -moz-transform: rotate(-89deg) translateX(-190px);
 }
-
-.chart:hover .outer {
-  stroke-dashoffset: 534 !important;
-  -webkit-animation-play-state: paused;
+.segment-right{
+  border-right-color: transparent;
 }
-
-
-.chart[data-percent='100'] .outer {
-  stroke-dashoffset: 0;
-  -webkit-animation: show100 2s;
-  animation: show100 2s;
+.segment-bottom{
+  animation: turnBottom 1s ease-in-out ;
+  animation-fill-mode: forwards;
 }
-
-.chart[data-percent='75'] .outer {
-  stroke-dashoffset: 133;
-  -webkit-animation: show75 2s;
-  animation: show75 2s;
+.segment-left{
+  animation: turnLeft 1s ease-in-out ;
+  animation-fill-mode: forwards;
 }
-
-.chart[data-percent='50'] .outer {
-  stroke-dashoffset: 267;
-  -webkit-animation: show50 2s;
-  animation: show50 2s;
+.calls-container .segment-top{
+  animation: turnTop 1s ease-in-out ;
+  animation-fill-mode: forwards;
 }
-
-.chart[data-percent='25'] .outer {
-  stroke-dashoffset: 401;
-  -webkit-animation: show25 2s;
-  animation: show25 2s;
+.pax-container .segment-top{
+  animation: turnTop2 1s ease-in-out ;
+  animation-fill-mode: forwards;
 }
-@-webkit-keyframes show100 {
-  from {
-    stroke-dashoffset: 537;
+@keyframes turnBottom{
+  0% {
+    transform: rotate(0deg);
   }
-  
-  to {
-    stroke-dashoffset: 0;
+  100% {
+    transform: rotate(90deg);
   }
 }
-
-@keyframes show100 {
-  from {
-    stroke-dashoffset: 537;
+@keyframes turnLeft{
+  0% {
+    transform: rotate(0deg);
   }
-  
-  to {
-    stroke-dashoffset: 0;
+  100% {
+    transform: rotate(179deg);
   }
 }
-
-@-webkit-keyframes show75 {
-  from {
-    stroke-dashoffset: 537;
+@keyframes turnTop{
+  0% {
+    transform: rotate(0deg);
   }
-  
-  to {
-    stroke-dashoffset: 134;
+  100% {
+    transform: rotate(218deg);
   }
 }
-
-@keyframes show75 {
-  from {
-    stroke-dashoffset: 537;
+@keyframes turnTop2{
+  0% {
+    transform: rotate(0deg);
   }
-  
-  to {
-    stroke-dashoffset: 124;
-  }
-}
-
-@-webkit-keyframes show50 {
-  from {
-    stroke-dashoffset: 537;
-  }
-  
-  to {
-    stroke-dashoffset: 267;
-  }
-}
-
-@keyframes show50 {
-  from {
-    stroke-dashoffset: 537;
-  }
-  
-  to {
-    stroke-dashoffset: 267;
-  }
-}
-
-@-webkit-keyframes show25 {
-  from {
-    stroke-dashoffset: 537;
-  }
-  
-  to {
-    stroke-dashoffset: 401;
-  }
-}
-
-@keyframes show25 {
-  from {
-    stroke-dashoffset: 537;
-  }
-  
-  to {
-    stroke-dashoffset: 401;
+  100% {
+    transform: rotate(268deg);
   }
 }
