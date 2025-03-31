@@ -21,8 +21,8 @@
   --color-fourth: #00ffff;
   --color-fifth-border: #38568e;
 }
-.textArrivals{
-color: var(--color-fourth);
+.textArrivals {
+  color: var(--color-fourth);
 }
 
 .icon-mark {
@@ -64,9 +64,24 @@ color: var(--color-fourth);
 .animated-border {
   background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
   background-size: 200% 100%;
-  animation: gradientBorder2 2s linear infinite; /* Usamos linear para un movimiento constante */
+  animation: gradientBorder2 2s linear infinite; 
+  clip-path: polygon(20% 10%, 80% 10%, 100% 50%, 80% 90%, 20% 90%, 0 50%);
+}
+/* .animated-border {
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  background-size: 200% 100%;
+  animation: gradientAnimation 2s linear infinite;
+  clip-path: polygon(20% 30%, 80% 30%, 100% 50%, 80% 70%, 30% 70%, 0% 50%);
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
 /* @keyframes borderFlow {
   0%, 100% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
   5% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
@@ -91,8 +106,12 @@ color: var(--color-fourth);
 } */
 
 @keyframes gradientBorder {
-  0% { background-position: -100% 0; }
-  100% { background-position: 100% 0; }
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 .card {
@@ -108,13 +127,85 @@ color: var(--color-fourth);
   position: absolute;
   inset: -2px; /* Cubre el borde del .card */
   border-radius: 0.75rem;
-  background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    white,
+    var(--color-secondary)
+  );
   background-size: 200% 100%;
   animation: gradientBorder 2s linear infinite;
   z-index: -1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   padding: 2px; /* Grosor del borde */
+}
+.Loader,.segment-right, .segment-bottom, .segment-left , .segment-top{
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border-radius: 50%;
+}
+.Loader{
+  border: solid 1rem #007297;
+}
+.segment-right, .segment-bottom, .segment-left, .segment-top{
+  border: solid 1rem transparent;
+  border-right-color: aqua;
+  animation: showBorder 1s linear ;
+  animation-fill-mode: forwards;
+  
+}
+.segment-right{
+  border-right-color: transparent;
+}
+.segment-bottom{
+  animation: turnBottom 1s ease-in-out ;
+  animation-fill-mode: forwards;
+}
+.segment-left{
+  animation: turnLeft 1s ease-in-out ;
+  animation-fill-mode: forwards;
+}
+.calls-container .segment-top{
+  animation: turnTop 1s ease-in-out ;
+  animation-fill-mode: forwards;
+}
+.pax-container .segment-top{
+  animation: turnTop2 1s ease-in-out ;
+  animation-fill-mode: forwards;
+}
+@keyframes turnBottom{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes turnLeft{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(179deg);
+  }
+}
+@keyframes turnTop{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(218deg);
+  }
+}
+@keyframes turnTop2{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(268deg);
+  }
 }
