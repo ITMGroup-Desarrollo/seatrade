@@ -76,18 +76,17 @@
   padding: 1rem;
   border: none;
   border-radius: 0.75rem;
-  /* animation: borderFlow 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite; */
 }
 
 .card::before {
   content: "";
   position: absolute;
-  inset: -2px; /* Cubre el borde del .card */
+  inset: -2px; 
   border-radius: 0.75rem;
   background: linear-gradient(
     90deg,
-    rgba(35, 74, 142, 0.4), /* Azul secundario con 70% de opacidad */
-    rgba(255, 255, 255, 0.4), /* Blanco semitransparente */
+    rgba(35, 74, 142, 0.4), 
+    rgba(255, 255, 255, 0.4), 
     rgba(35, 74, 142, 0.4)
   );
   background-size: 200% 100%;
@@ -95,7 +94,7 @@
   z-index: -1;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  padding: 2px; /* Grosor del borde */
+  padding: 2px;
 }
 
 .Loader,.segment-right, .segment-bottom, .segment-left , .segment-top{
