@@ -16,8 +16,13 @@
 
 :root {
   --color-blue-text: #54c0e8;
-  --color-secondary: #20488a;
+  --color-secondary: #234a8e;
   --color-tertiary: #042256;
+  --color-fourth: #00ffff;
+  --color-fifth-border: #38568e;
+}
+.textArrivals{
+color: var(--color-fourth);
 }
 
 .icon-mark {
@@ -46,134 +51,70 @@
     #042256 95%
   );
 }
-@keyframes orbit-border {
+
+@keyframes gradientBorder2 {
   0% {
-    top: 0%;
-    left: 0%;
-    --opacity: 1;
-  }
-  25% {
-    top: 0%;
-    left: 100%;
-  }
-  50% {
-    top: 100%;
-    left: 100%;
-    --opacity: 1;
-  }
-  75% {
-    top: 100%;
-    left: 0%;
+    background-position: -100% 0; 
   }
   100% {
-    top: 0%;
-    left: 0%;
-    --opacity: 1;
+    background-position: 100% 0; 
   }
 }
 
-.orbit-container {
+.animated-border {
+  background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
+  background-size: 200% 100%;
+  animation: gradientBorder2 2s linear infinite; /* Usamos linear para un movimiento constante */
+}
+
+/* @keyframes borderFlow {
+  0%, 100% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
+  5% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
+  10% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
+  15% { box-shadow: 0 0 0 2px transparent, 0.8px -0.6px 0 1px rgba(255, 255, 255, 0.87); }
+  20% { box-shadow: 0 0 0 2px transparent, 1px 0 0 1px rgba(255, 255, 255, 0.9); }
+  25% { box-shadow: 0 0 0 2px transparent, 0.9px 0.3px 0 1px rgba(255, 255, 255, 0.88); }
+  30% { box-shadow: 0 0 0 2px transparent, 0.8px 0.6px 0 1px rgba(255, 255, 255, 0.85); }
+  35% { box-shadow: 0 0 0 2px transparent, 0.6px 0.8px 0 1px rgba(255, 255, 255, 0.83); }
+  40% { box-shadow: 0 0 0 2px transparent, 0 1px 0 1px rgba(255, 255, 255, 0.8); }
+  45% { box-shadow: 0 0 0 2px transparent, -0.3px 0.9px 0 1px rgba(255, 255, 255, 0.78); }
+  50% { box-shadow: 0 0 0 2px transparent, -0.6px 0.8px 0 1px rgba(255, 255, 255, 0.75); }
+  55% { box-shadow: 0 0 0 2px transparent, -0.8px 0.6px 0 1px rgba(255, 255, 255, 0.73); }
+  60% { box-shadow: 0 0 0 2px transparent, -1px 0 0 1px rgba(255, 255, 255, 0.7); }
+  65% { box-shadow: 0 0 0 2px transparent, -0.9px -0.3px 0 1px rgba(255, 255, 255, 0.72); }
+  70% { box-shadow: 0 0 0 2px transparent, -0.8px -0.6px 0 1px rgba(255, 255, 255, 0.75); }
+  75% { box-shadow: 0 0 0 2px transparent, -0.6px -0.8px 0 1px rgba(255, 255, 255, 0.77); }
+  80% { box-shadow: 0 0 0 2px transparent, 0 -1px 0 1px rgba(255, 255, 255, 0.8); }
+  85% { box-shadow: 0 0 0 2px transparent, 0.2px -0.95px 0 1px rgba(255, 255, 255, 0.82); }
+  90% { box-shadow: 0 0 0 2px transparent, 0.5px -0.9px 0 1px rgba(255, 255, 255, 0.85); }
+  95% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
+} */
+
+@keyframes gradientBorder {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
+
+.card {
   position: relative;
-  overflow: visible;
-  --opacity: 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  /* animation: borderFlow 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite; */
 }
 
-.orbit-ball {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 80%;
-  animation: orbit-border 3s linear infinite;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  pointer-events: none;
-
-  /* Destello */
-  background: white;
-  filter: blur(8px);
-  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.8),
-    0 0 20px 10px rgba(255, 255, 255, 0.3);
-
-  /* Efecto de borde localizado */
-  &::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 2px solid white;
-    border-radius: inherit;
-    opacity: var(--opacity);
-    animation: inherit;
-    animation-name: none;
-    filter: blur(2px);
-    transition: opacity 0.2s;
-  }
-}
-.box {
-  position: relative;
-  transform: translate(0%, 0%);
-  overflow: hidden;
-}
-
-/* Capa superior para el efecto hover */
-.box:before {
-  transition: 0.5s;
-  pointer-events: none;
-}
-
-/* Elementos para la animación del borde */
-.box span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.box span:nth-child(1) {
-  transform: rotate(0deg);
-}
-
-.box span:nth-child(2) {
-  transform: rotate(90deg);
-}
-
-.box span:nth-child(3) {
-  transform: rotate(180deg);
-}
-
-.box span:nth-child(4) {
-  transform: rotate(270deg);
-}
-
-.box span:before {
+.card::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 2px;
-  background: white;
-  animation: animate 4s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-  50% {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  50.1% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-}
-
-.line {
-  clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
+  inset: -2px; /* Cubre el borde del .card */
+  border-radius: 0.75rem;
+  background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
+  background-size: 200% 100%;
+  animation: gradientBorder 2s linear infinite;
+  z-index: -1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  padding: 2px; /* Grosor del borde */
 }

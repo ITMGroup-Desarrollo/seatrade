@@ -46,7 +46,7 @@ export default function Carousel() {
 
   return (
     <div className="grid grid-rows-1 grid-cols-12 h-full px-8 py-4">
-      <div className="text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[#233f80]/50  h-full py-4 pl-4 gap-2 rounded-l-xl">
+      <div className="text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[var(--color-secondary)]/50  h-full py-4 pl-4 gap-2 rounded-l-xl">
         <Card className="row-span-1 grid grid-cols-2 grid-rows-1 ">
           <div className="col-span-1 justify-center self-center text-center rounded-xl h-full w-auto">
             <img
@@ -64,9 +64,9 @@ export default function Carousel() {
         </Card>
       </div>
       <div
-        className={`col-span-8  w-full bg-[#233f80]/50 h-full justify-baseline items-center flex p-6 ${port.galleryClass}`}
+        className={`col-span-8  w-full bg-[var(--color-secondary)]/50 h-full justify-baseline items-center flex p-6 ${port.galleryClass}`}
       >
-        <div className="swiper carrusel-container h-full  rounded-xl bg-[#091e57]/80">
+        <div className="swiper carrusel-container h-full  rounded-xl bg-[var(--color-tertiary)]/80">
           <div className="swiper-wrapper w-full">
             {port.gallery.map((image, index) => (
               <div
@@ -86,7 +86,7 @@ export default function Carousel() {
         </div>
       </div>
       <div
-        className={`text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[#233f80]/50 h-full pr-4 py-4 gap-2 rounded-r-xl ${port.socialDisplay}`}
+        className={`text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[var(--color-secondary)]/50 h-full pr-4 py-4 gap-2 rounded-r-xl ${port.socialDisplay}`}
       >
         <Card className="row-span-1 grid grid-cols-2 grid-rows-1">
           <div className="self-center text-center flex flex-row justify-center items-center z-10">
