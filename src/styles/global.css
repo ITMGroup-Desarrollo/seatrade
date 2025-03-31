@@ -34,33 +34,82 @@
   fill: #4990c8;
   stroke: #4990c8;
 }
-.containerMap path,
-.containerMap polygon {
-  stroke: #20488a;
-  stroke-width: 1;
-  stroke-linejoin: round;
-  /* stroke-opacity: 0.4; */
+.containerMap path.state:hover {
+  fill: white;
+  stroke: white;
+}
+.containerMap path.state-active {
+  stroke: white !important;
+  fill: white !important;
 }
 .bg-custom-gradient {
   background: linear-gradient(
     to right,
-    rgba(4, 34, 86, 0.4) 5%,  
+    rgba(4, 34, 86, 0.4) 5%,
     rgba(35, 74, 142, 0.4) 30%,
-    rgba(35, 74, 142, 0.4) 50%, 
-    rgba(35, 74, 142, 0.4) 70%, 
+    rgba(35, 74, 142, 0.4) 50%,
+    rgba(35, 74, 142, 0.4) 70%,
     rgba(4, 34, 86, 0.4) 95%
   );
 }
 
-
 @keyframes gradientBorder2 {
   0% {
-    background-position: -100% 0; 
+    background-position: -100% 0;
   }
   100% {
-    background-position: 100% 0; 
+    background-position: 100% 0;
   }
 }
+
+.animated-border {
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    white,
+    var(--color-secondary)
+  );
+  background-size: 200% 100%;
+  animation: gradientBorder2 2s linear infinite;
+  clip-path: polygon(20% 10%, 80% 10%, 100% 50%, 80% 90%, 20% 90%, 0 50%);
+}
+/* .animated-border {
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  background-size: 200% 100%;
+  animation: gradientAnimation 2s linear infinite;
+  clip-path: polygon(20% 30%, 80% 30%, 100% 50%, 80% 70%, 30% 70%, 0% 50%);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+/* @keyframes borderFlow {
+  0%, 100% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
+  5% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
+  10% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
+  15% { box-shadow: 0 0 0 2px transparent, 0.8px -0.6px 0 1px rgba(255, 255, 255, 0.87); }
+  20% { box-shadow: 0 0 0 2px transparent, 1px 0 0 1px rgba(255, 255, 255, 0.9); }
+  25% { box-shadow: 0 0 0 2px transparent, 0.9px 0.3px 0 1px rgba(255, 255, 255, 0.88); }
+  30% { box-shadow: 0 0 0 2px transparent, 0.8px 0.6px 0 1px rgba(255, 255, 255, 0.85); }
+  35% { box-shadow: 0 0 0 2px transparent, 0.6px 0.8px 0 1px rgba(255, 255, 255, 0.83); }
+  40% { box-shadow: 0 0 0 2px transparent, 0 1px 0 1px rgba(255, 255, 255, 0.8); }
+  45% { box-shadow: 0 0 0 2px transparent, -0.3px 0.9px 0 1px rgba(255, 255, 255, 0.78); }
+  50% { box-shadow: 0 0 0 2px transparent, -0.6px 0.8px 0 1px rgba(255, 255, 255, 0.75); }
+  55% { box-shadow: 0 0 0 2px transparent, -0.8px 0.6px 0 1px rgba(255, 255, 255, 0.73); }
+  60% { box-shadow: 0 0 0 2px transparent, -1px 0 0 1px rgba(255, 255, 255, 0.7); }
+  65% { box-shadow: 0 0 0 2px transparent, -0.9px -0.3px 0 1px rgba(255, 255, 255, 0.72); }
+  70% { box-shadow: 0 0 0 2px transparent, -0.8px -0.6px 0 1px rgba(255, 255, 255, 0.75); }
+  75% { box-shadow: 0 0 0 2px transparent, -0.6px -0.8px 0 1px rgba(255, 255, 255, 0.77); }
+  80% { box-shadow: 0 0 0 2px transparent, 0 -1px 0 1px rgba(255, 255, 255, 0.8); }
+  85% { box-shadow: 0 0 0 2px transparent, 0.2px -0.95px 0 1px rgba(255, 255, 255, 0.82); }
+  90% { box-shadow: 0 0 0 2px transparent, 0.5px -0.9px 0 1px rgba(255, 255, 255, 0.85); }
+  95% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
+} */
 
 @keyframes gradientBorder {
   0% {
@@ -81,12 +130,12 @@
 .card::before {
   content: "";
   position: absolute;
-  inset: -2px; 
+  inset: -2px;
   border-radius: 0.75rem;
   background: linear-gradient(
     90deg,
-    rgba(35, 74, 142, 0.4), 
-    rgba(255, 255, 255, 0.4), 
+    rgba(35, 74, 142, 0.4),
+    rgba(255, 255, 255, 0.4),
     rgba(35, 74, 142, 0.4)
   );
   background-size: 200% 100%;
@@ -96,8 +145,11 @@
   mask-composite: exclude;
   padding: 2px;
 }
-
-.Loader,.segment-right, .segment-bottom, .segment-left , .segment-top{
+.Loader,
+.segment-right,
+.segment-bottom,
+.segment-left,
+.segment-top {
   position: absolute;
   width: 90%;
   height: 90%;
@@ -105,36 +157,38 @@
   margin-left: 5%;
   border-radius: 50%;
 }
-.Loader{
+.Loader {
   border: solid 1rem #007297;
 }
-.segment-right, .segment-bottom, .segment-left, .segment-top{
+.segment-right,
+.segment-bottom,
+.segment-left,
+.segment-top {
   border: solid 1rem transparent;
   border-right-color: aqua;
-  animation: showBorder 1s linear ;
+  animation: showBorder 1s linear;
   animation-fill-mode: forwards;
-  
 }
-.segment-right{
+.segment-right {
   border-right-color: transparent;
 }
-.segment-bottom{
-  animation: turnBottom 1s ease-in-out ;
+.segment-bottom {
+  animation: turnBottom 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-.segment-left{
-  animation: turnLeft 1s ease-in-out ;
+.segment-left {
+  animation: turnLeft 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-.calls-container .segment-top{
-  animation: turnTop 1s ease-in-out ;
+.calls-container .segment-top {
+  animation: turnTop 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-.pax-container .segment-top{
-  animation: turnTop2 1s ease-in-out ;
+.pax-container .segment-top {
+  animation: turnTop2 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-@keyframes turnBottom{
+@keyframes turnBottom {
   0% {
     transform: rotate(0deg);
   }
@@ -142,7 +196,7 @@
     transform: rotate(90deg);
   }
 }
-@keyframes turnLeft{
+@keyframes turnLeft {
   0% {
     transform: rotate(0deg);
   }
@@ -150,7 +204,7 @@
     transform: rotate(179deg);
   }
 }
-@keyframes turnTop{
+@keyframes turnTop {
   0% {
     transform: rotate(0deg);
   }
@@ -158,25 +212,11 @@
     transform: rotate(218deg);
   }
 }
-@keyframes turnTop2{
+@keyframes turnTop2 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(268deg);
-  }
-}
-@layer utilities {
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 0.6s ease-in-out forwards;
   }
 }
