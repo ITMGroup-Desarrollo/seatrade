@@ -44,13 +44,14 @@
 .bg-custom-gradient {
   background: linear-gradient(
     to right,
-    #042256 5%,
-    #234a8e 30%,
-    #234a8e 50%,
-    #234a8e 70%,
-    #042256 95%
+    rgba(4, 34, 86, 0.4) 5%,  
+    rgba(35, 74, 142, 0.4) 30%,
+    rgba(35, 74, 142, 0.4) 50%, 
+    rgba(35, 74, 142, 0.4) 70%, 
+    rgba(4, 34, 86, 0.4) 95%
   );
 }
+
 
 @keyframes gradientBorder2 {
   0% {
