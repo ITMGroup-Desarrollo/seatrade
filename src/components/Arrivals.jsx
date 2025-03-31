@@ -3,11 +3,27 @@ import Calls from "./Calls";
 import usePort from "../hooks/use-port";
 import CallsIcon from "../assets/images/icon-calls.svg";
 import PaxIcon from "../assets/images/icon-pax.svg";
-import Rueda from "./Rueda";
+import RuedaCalls from "./RuedaCalls";
+import RuedaPax from "./RuedaPax";
+import { useState, useEffect } from "react";
 
 export default function Arrivals() {
   const name = usePort((state) => state.port.name);
   const calls = usePort((state) => state.port.calls);
+  const [eventKey, setEventKey] = useState(0);
+
+  useEffect(() => {
+    const resetEvent = () => {
+      setEventKey((prevKey) => prevKey + 1);
+    };
+
+    const icons = document.querySelectorAll(".icon-mark");
+    icons.forEach((icon) => icon.addEventListener("click", resetEvent));
+
+    return () => {
+      icons.forEach((icon) => icon.removeEventListener("click", resetEvent));
+    };
+  }, []);
 
   return (
     <div
@@ -16,16 +32,16 @@ export default function Arrivals() {
       }`}
     >
       <div className="grid grid-rows-5 h-full rounded-xl bg-[var(--color-secondary)]/50 border-2 border-[var(--color-fifth-border)] gap-2">
-        <div className="row-span-1 text-white text-xl font-bold uppercase content-center text-center">
+        <div key={eventKey} className="row-span-1 text-white text-xl font-bold uppercase content-center text-center animate-fadeIn">
           Arrivals&nbsp;in <br /> {name}
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
           <div className="relative row-span-2 flex justify-center items-center text-center">
             <div>
-              <img src={CallsIcon.src} alt="calls" className="w-12 z-10" />
+              <img src={CallsIcon.src} alt="calls" className="w-12 z-10 " />
               <p className="textArrivals font-medium">CALLS</p>
             </div>
-             <Rueda className="calls-container"/>
+             <RuedaCalls key={eventKey} className="calls-container animate-fadeIn"/>
           </div>
 
           <div className="row-span-1 text-center content-center text-white font-bold text-5xl ">
@@ -33,12 +49,12 @@ export default function Arrivals() {
           </div>
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
-          <div className="pax-Container relative row-span-2 flex justify-center items-center text-center">
+          <div className="pax-Container relative row-span-2 flex justify-center items-center text-center ">
             <div>
-              <img src={PaxIcon.src} alt="Pax" className="w-12 z-10" />
+              <img src={PaxIcon.src} alt="Pax" className="w-12 z-10 " />
               <p className="textArrivals font-medium">PAX</p>
             </div>
-            <Rueda className="pax-container" />
+            <RuedaPax key={eventKey} className="pax-container animate-fadeIn" />
           </div>
           <div className="row-span-1 text-center content-center text-white font-semibold text-3xl">
             <Pax />
