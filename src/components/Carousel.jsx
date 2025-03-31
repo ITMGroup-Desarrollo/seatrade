@@ -8,41 +8,55 @@ import logoInstagram from "../assets/instagram-white.svg";
 
 export default function Carousel() {
   const slides = usePort((state) => state.port.slides);
+  const port = usePort((state) => state.port);
   const swiperRef = useRef(null);
+
+  const initializeSwiper = () => {
+    if (swiperRef.current) {
+      swiperRef.current.destroy(true, true);
+    }
+
+    swiperRef.current = new Swiper(".carrusel-container", {
+      loop: true,
+      slidesPerView: slides,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      on: {
+        init: (swiper) => swiper.slideTo(0, 0, false), 
+      },
+    });
+
+    swiperRef.current.slideTo(0, 0, false); 
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined" && slides) {
-      if (swiperRef.current) {
-        swiperRef.current.destroy(true, true);
-      }
-
-      swiperRef.current = new Swiper(".carrusel-container", {
-        loop: true,
-        slidesPerView: slides,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-      });
+      initializeSwiper();
     }
+
     return () => {
       if (swiperRef.current) {
         swiperRef.current.destroy(true, true);
       }
     };
-  }, [slides]);
+  }, [slides, port]); 
+  useEffect(() => {
+    const resetSwiper = () => {
+      if (swiperRef.current) {
+        swiperRef.current.destroy(true, true); 
+        initializeSwiper(); 
+      }
+    };
 
-  const port = usePort((state) => state.port);
+    const icons = document.querySelectorAll(".icon-mark");
+    icons.forEach((icon) => icon.addEventListener("click", resetSwiper));
 
-  // const instagram = usePort((state) => state.port.instagram);
-  // const followers = usePort((state) => state.port.followers);
-  // const country = usePort((state) => state.port.country);
-  // const flag = usePort((state) => state.port.flag);
-  // const logo = usePort((state) => state.port.logo);
-  // const gallery = usePort((state) => state.port.gallery);
-
-  // const galleryClass = usePort((state) => state.port.galleryClass);
-  // const socialDisplay = usePort((state) => state.port.socialDisplay);
+    return () => {
+      icons.forEach((icon) => icon.removeEventListener("click", resetSwiper));
+    };
+  }, []);
 
   return (
     <div className="grid grid-rows-1 grid-cols-12 h-full px-8 py-4">
@@ -64,9 +78,9 @@ export default function Carousel() {
         </Card>
       </div>
       <div
-        className={`col-span-8  w-full bg-[var(--color-secondary)]/50 h-full justify-baseline items-center flex p-6 ${port.galleryClass}`}
+        className={`col-span-8 w-full bg-[var(--color-secondary)]/50 h-full justify-baseline items-center flex p-6 ${port.galleryClass}`}
       >
-        <div className="swiper carrusel-container h-full  rounded-xl bg-[var(--color-tertiary)]/80">
+        <div className="swiper carrusel-container h-full rounded-xl bg-[var(--color-tertiary)]/80">
           <div className="swiper-wrapper w-full">
             {port.gallery.map((image, index) => (
               <div
