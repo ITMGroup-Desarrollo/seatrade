@@ -88,7 +88,7 @@ export default function Carousel() {
       <div
         className={`col-span-8 w-full bg-[var(--color-secondary)]/50 h-full justify-baseline items-center flex p-6 ${port.galleryClass}`}
       >
-        <div className="swiper carrusel-container h-full rounded-xl bg-[var(--color-tertiary)]/80">
+        <div className="swiper carrusel-container h-full rounded-xl bg-[var(--color-tertiary)]/40">
           <div  className="swiper-wrapper w-full">
             {port.gallery.map((image, index) => (
               <div

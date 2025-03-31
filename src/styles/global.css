@@ -44,13 +44,14 @@
 .bg-custom-gradient {
   background: linear-gradient(
     to right,
-    #042256 5%,
-    #234a8e 30%,
-    #234a8e 50%,
-    #234a8e 70%,
-    #042256 95%
+    rgba(4, 34, 86, 0.4) 5%,  
+    rgba(35, 74, 142, 0.4) 30%,
+    rgba(35, 74, 142, 0.4) 50%, 
+    rgba(35, 74, 142, 0.4) 70%, 
+    rgba(4, 34, 86, 0.4) 95%
   );
 }
+
 
 @keyframes gradientBorder2 {
   0% {
@@ -60,50 +61,6 @@
     background-position: 100% 0; 
   }
 }
-
-.animated-border {
-  background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
-  background-size: 200% 100%;
-  animation: gradientBorder2 2s linear infinite; 
-  clip-path: polygon(20% 10%, 80% 10%, 100% 50%, 80% 90%, 20% 90%, 0 50%);
-}
-/* .animated-border {
-  background: linear-gradient(90deg, transparent, #ffffff, transparent);
-  background-size: 200% 100%;
-  animation: gradientAnimation 2s linear infinite;
-  clip-path: polygon(20% 30%, 80% 30%, 100% 50%, 80% 70%, 30% 70%, 0% 50%);
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */
-/* @keyframes borderFlow {
-  0%, 100% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
-  5% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
-  10% { box-shadow: 0 0 0 2px transparent, 0.6px -0.8px 0 1px rgba(255, 255, 255, 0.85); }
-  15% { box-shadow: 0 0 0 2px transparent, 0.8px -0.6px 0 1px rgba(255, 255, 255, 0.87); }
-  20% { box-shadow: 0 0 0 2px transparent, 1px 0 0 1px rgba(255, 255, 255, 0.9); }
-  25% { box-shadow: 0 0 0 2px transparent, 0.9px 0.3px 0 1px rgba(255, 255, 255, 0.88); }
-  30% { box-shadow: 0 0 0 2px transparent, 0.8px 0.6px 0 1px rgba(255, 255, 255, 0.85); }
-  35% { box-shadow: 0 0 0 2px transparent, 0.6px 0.8px 0 1px rgba(255, 255, 255, 0.83); }
-  40% { box-shadow: 0 0 0 2px transparent, 0 1px 0 1px rgba(255, 255, 255, 0.8); }
-  45% { box-shadow: 0 0 0 2px transparent, -0.3px 0.9px 0 1px rgba(255, 255, 255, 0.78); }
-  50% { box-shadow: 0 0 0 2px transparent, -0.6px 0.8px 0 1px rgba(255, 255, 255, 0.75); }
-  55% { box-shadow: 0 0 0 2px transparent, -0.8px 0.6px 0 1px rgba(255, 255, 255, 0.73); }
-  60% { box-shadow: 0 0 0 2px transparent, -1px 0 0 1px rgba(255, 255, 255, 0.7); }
-  65% { box-shadow: 0 0 0 2px transparent, -0.9px -0.3px 0 1px rgba(255, 255, 255, 0.72); }
-  70% { box-shadow: 0 0 0 2px transparent, -0.8px -0.6px 0 1px rgba(255, 255, 255, 0.75); }
-  75% { box-shadow: 0 0 0 2px transparent, -0.6px -0.8px 0 1px rgba(255, 255, 255, 0.77); }
-  80% { box-shadow: 0 0 0 2px transparent, 0 -1px 0 1px rgba(255, 255, 255, 0.8); }
-  85% { box-shadow: 0 0 0 2px transparent, 0.2px -0.95px 0 1px rgba(255, 255, 255, 0.82); }
-  90% { box-shadow: 0 0 0 2px transparent, 0.5px -0.9px 0 1px rgba(255, 255, 255, 0.85); }
-  95% { box-shadow: 0 0 0 2px transparent, 0.4px -0.95px 0 1px rgba(255, 255, 255, 0.84); }
-} */
 
 @keyframes gradientBorder {
   0% {
@@ -119,27 +76,27 @@
   padding: 1rem;
   border: none;
   border-radius: 0.75rem;
-  /* animation: borderFlow 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite; */
 }
 
 .card::before {
   content: "";
   position: absolute;
-  inset: -2px; /* Cubre el borde del .card */
+  inset: -2px; 
   border-radius: 0.75rem;
   background: linear-gradient(
     90deg,
-    var(--color-secondary),
-    white,
-    var(--color-secondary)
+    rgba(35, 74, 142, 0.4), 
+    rgba(255, 255, 255, 0.4), 
+    rgba(35, 74, 142, 0.4)
   );
   background-size: 200% 100%;
   animation: gradientBorder 2s linear infinite;
   z-index: -1;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  padding: 2px; /* Grosor del borde */
+  padding: 2px;
 }
+
 .Loader,.segment-right, .segment-bottom, .segment-left , .segment-top{
   position: absolute;
   width: 90%;
