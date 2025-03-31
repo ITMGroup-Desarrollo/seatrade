@@ -34,12 +34,13 @@
   fill: #4990c8;
   stroke: #4990c8;
 }
-.containerMap path,
-.containerMap polygon {
-  stroke: #20488a;
-  stroke-width: 1;
-  stroke-linejoin: round;
-  /* stroke-opacity: 0.4; */
+.containerMap path.state:hover {
+  fill: white;
+  stroke: white;
+}
+.containerMap path.state-active {
+  stroke: white !important;
+  fill: white !important;
 }
 .bg-custom-gradient {
   background: linear-gradient(
@@ -54,17 +55,22 @@
 
 @keyframes gradientBorder2 {
   0% {
-    background-position: -100% 0; 
+    background-position: -100% 0;
   }
   100% {
-    background-position: 100% 0; 
+    background-position: 100% 0;
   }
 }
 
 .animated-border {
-  background: linear-gradient(90deg, var(--color-secondary), white, var(--color-secondary));
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    white,
+    var(--color-secondary)
+  );
   background-size: 200% 100%;
-  animation: gradientBorder2 2s linear infinite; 
+  animation: gradientBorder2 2s linear infinite;
   clip-path: polygon(20% 10%, 80% 10%, 100% 50%, 80% 90%, 20% 90%, 0 50%);
 }
 /* .animated-border {
@@ -140,7 +146,11 @@
   mask-composite: exclude;
   padding: 2px; /* Grosor del borde */
 }
-.Loader,.segment-right, .segment-bottom, .segment-left , .segment-top{
+.Loader,
+.segment-right,
+.segment-bottom,
+.segment-left,
+.segment-top {
   position: absolute;
   width: 90%;
   height: 90%;
@@ -148,36 +158,38 @@
   margin-left: 5%;
   border-radius: 50%;
 }
-.Loader{
+.Loader {
   border: solid 1rem #007297;
 }
-.segment-right, .segment-bottom, .segment-left, .segment-top{
+.segment-right,
+.segment-bottom,
+.segment-left,
+.segment-top {
   border: solid 1rem transparent;
   border-right-color: aqua;
-  animation: showBorder 1s linear ;
+  animation: showBorder 1s linear;
   animation-fill-mode: forwards;
-  
 }
-.segment-right{
+.segment-right {
   border-right-color: transparent;
 }
-.segment-bottom{
-  animation: turnBottom 1s ease-in-out ;
+.segment-bottom {
+  animation: turnBottom 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-.segment-left{
-  animation: turnLeft 1s ease-in-out ;
+.segment-left {
+  animation: turnLeft 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-.calls-container .segment-top{
-  animation: turnTop 1s ease-in-out ;
+.calls-container .segment-top {
+  animation: turnTop 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-.pax-container .segment-top{
-  animation: turnTop2 1s ease-in-out ;
+.pax-container .segment-top {
+  animation: turnTop2 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-@keyframes turnBottom{
+@keyframes turnBottom {
   0% {
     transform: rotate(0deg);
   }
@@ -185,7 +197,7 @@
     transform: rotate(90deg);
   }
 }
-@keyframes turnLeft{
+@keyframes turnLeft {
   0% {
     transform: rotate(0deg);
   }
@@ -193,7 +205,7 @@
     transform: rotate(179deg);
   }
 }
-@keyframes turnTop{
+@keyframes turnTop {
   0% {
     transform: rotate(0deg);
   }
@@ -201,7 +213,7 @@
     transform: rotate(218deg);
   }
 }
-@keyframes turnTop2{
+@keyframes turnTop2 {
   0% {
     transform: rotate(0deg);
   }
