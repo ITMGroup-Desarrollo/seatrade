@@ -78,12 +78,12 @@ export default function Carousel() {
               className="h-full w-auto animate-fadeIn"
             />
           </div>
-          <div key={eventKey} className="col-span-1 justify-center self-center text-left text-lg font-semibold pl-3 uppercase animate-fadeIn">
+          <div key={eventKey} className="col-span-1 justify-center self-center text-center text-lg font-semibold uppercase animate-fadeIn">
             {port.country}
           </div>
         </Card>
-        <Card className="row-span-1 flex">
-          <img key={eventKey} className="h-2/3 animate-fadeIn" src={port.logo} alt="logo-taino" />
+        <Card className="row-span-1 flex h-full">
+          <img key={eventKey} className="h-5/6 animate-fadeIn py-0 my-0" src={port.logo} alt="logo-taino" />
         </Card>
       </div>
       <div
@@ -117,18 +117,19 @@ export default function Carousel() {
             <img
               src={logoInstagram.src}
               alt="instagram"
-              className="w-16 ml-4"
+              className="w-16 "
             />
             
           </div>
-          <Separador />
-          <div  className="self-center text-center text-6xl justify-center flex mb-2 font-semibold z-10 ">
+          <Separador className="max-h-2/3 md:mx-7"/>
+          <div  className="self-center text-center text-5xl justify-center flex mb-2 font-semibold z-10 ">
             <p key={eventKey} className="animate-fadeIn">{port.followers}</p>
           </div>
         </Card>
 
-        <Card className="row-span-1 flex flex-col">
-          <p key={eventKey} className="text-3xl font-semibold animate-fadeIn">{port.instagram}</p>
+        <Card className="row-span-1 flex flex-col content-center
+        ">
+          <p key={eventKey} className="text-2xl font-semibold animate-fadeIn">{port.instagram}</p>
           <div>
             <img key={eventKey} className="animate-fadeIn" src={port.qr} width={80} alt="" />
           </div>
