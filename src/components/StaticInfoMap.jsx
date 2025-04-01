@@ -1,17 +1,20 @@
 import Card from "./Card";
 import Separador from "./Separador";
+import AnimatedNumber from "../components/AnimatedNumber";
 import happyIcon from "../assets/images/icon-happy.svg";
 export default function StaticInfoMap() {
   return (
-    <div class="pl-8 flex absolute bottom-0 w-full justify-around">
+    <div className="pl-8 flex absolute bottom-0 w-full justify-around">
       <Card className=" flex w-2/4 mr-10">
-        <div class="flex items-center">
-          <div class="text-5xl mr-2 text-white font-bold">1,646</div>
-          <div class="flex flex-col uppercase font-bold mt-1">
-            <span class="text-sm text-[var(--color-blue-text)] leading-none">
+        <div className="flex items-center">
+          <div className="text-5xl mr-2 text-white font-bold">
+            <AnimatedNumber value={1646} duration={500} />
+          </div>
+          <div className="flex flex-col uppercase font-bold mt-1">
+            <span className="text-sm text-[var(--color-blue-text)] leading-none">
               Total
             </span>
-            <span class="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-sm text-[var(--color-blue-text)] leading-none">
               Calls
             </span>
           </div>
@@ -19,26 +22,30 @@ export default function StaticInfoMap() {
 
         <Separador />
 
-        <div class="flex items-center">
-          <div class="text-5xl mr-2 text-white font-bold">6,358,445</div>
-          <div class="flex flex-col uppercase font-bold mt-1">
-            <span class="text-sm text-[var(--color-blue-text)] leading-none">
+        <div className="flex items-center">
+          <div className="text-5xl mr-2 text-white font-bold">
+            <AnimatedNumber value={6358445} duration={500} />
+          </div>
+          <div className="flex flex-col uppercase font-bold mt-1">
+            <span className="text-sm text-[var(--color-blue-text)] leading-none">
               Total
             </span>
-            <span class="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-sm text-[var(--color-blue-text)] leading-none">
               pax
             </span>
           </div>
         </div>
       </Card>
       <Card className=" flex w-1/4 mr-10">
-        <div class="flex items-center">
-          <div class="text-5xl mr-2 text-white font-bold">7</div>
-          <div class="flex flex-col uppercase font-bold mt-1">
-            <span class="text-sm text-[var(--color-blue-text)] leading-none">
+        <div className="flex items-center">
+          <div className="text-5xl mr-2 text-white font-bold">
+            <AnimatedNumber value={7} duration={500} />
+          </div>
+          <div className="flex flex-col uppercase font-bold mt-1">
+            <span className="text-sm text-[var(--color-blue-text)] leading-none">
               cruise port
             </span>
-            <span class="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-sm text-[var(--color-blue-text)] leading-none">
               destinations
             </span>
           </div>
@@ -46,18 +53,20 @@ export default function StaticInfoMap() {
 
         <Separador />
 
-        <div class="flex items-center">
-          <div class="text-5xl mr-2 text-white font-bold">3</div>
-          <div class="flex flex-col uppercase font-bold mt-1">
-            <span class="text-sm text-[var(--color-blue-text)] leading-none">
+        <div className="flex items-center">
+          <div className="text-5xl mr-2 text-white font-bold">
+            <AnimatedNumber value={3} duration={700} />
+          </div>
+          <div className="flex flex-col uppercase font-bold mt-1">
+            <span className="text-sm text-[var(--color-blue-text)] leading-none">
               countries
             </span>
           </div>
         </div>
       </Card>
       <Card className=" flex w-1/4">
-        <div class="flex items-center">
-          <div class="text-5xl mr-2 text-white font-bold">
+        <div className="flex items-center">
+          <div className="text-5xl mr-6 text-white font-bold">
             <img
               src={happyIcon.src}
               width={45}
@@ -67,17 +76,21 @@ export default function StaticInfoMap() {
           </div>
           <div>
             <div>
-              <p class="text-base text-[var(--color-blue-text)] leading-none font-bold uppercase">
+              <p className="text-base text-[var(--color-blue-text)] leading-none font-bold uppercase">
                 satisfaction rate
               </p>
             </div>
-            <div class="flex uppercase font-bold">
-              <div class="text-4xl mr-2 text-white font-bold leading-none">
-                <p className="leading-none">96%</p>
+            <div className="flex uppercase font-bold">
+              <div className="text-4xl mr-2 text-white font-bold leading-none">
+                <p className="leading-none">
+                  <AnimatedNumber value={96} duration={500} />%
+                </p>
               </div>
               <div className="flex flex-col justify-center">
-                <span class="text-xs text-white leading-none">satisfied</span>
-                <span class="text-xs text-white leading-none">
+                <span className="text-xs text-white leading-none">
+                  satisfied
+                </span>
+                <span className="text-xs text-white leading-none">
                   & very satisfied
                 </span>
               </div>

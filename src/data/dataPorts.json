@@ -23,7 +23,8 @@
     "longitude": -87.713,
     "slides": 5,
     "galleryClass": "col-span-8",
-    "socialDisplay": ""
+    "socialDisplay": "",
+    "video": "videos/CM.mp4"
   },
   "roatan": {
     "name": "Roatán",
@@ -49,7 +50,8 @@
     "longitude": -86.4,
     "slides": 5,
     "galleryClass": "col-span-8",
-    "socialDisplay": ""
+    "socialDisplay": "",
+    "video": "videos/RT.mp4"
   },
   "taino-bay": {
     "name": "Taino Bay",
@@ -75,7 +77,8 @@
     "longitude": -70.683,
     "slides": 5,
     "galleryClass": "col-span-8",
-    "socialDisplay": ""
+    "socialDisplay": "",
+    "video": "videos/TB.mp4"
   },
   "cabo-rojo": {
     "name": "Cabo Rojo",
@@ -102,7 +105,8 @@
     "longitude": -71.65,
     "slides": 5,
     "galleryClass": "col-span-8",
-    "socialDisplay": ""
+    "socialDisplay": "",
+    "video": "videos/CR.mp4"
   },
   "samana": {
     "name": "Samana",
@@ -126,7 +130,8 @@
     "longitude": -69.35,
     "slides": 5,
     "galleryClass": "col-span-8",
-    "socialDisplay": ""
+    "socialDisplay": "",
+    "video": "videos/SA.mp4"
   },
   "la-paz": {
     "name": "La Paz",
@@ -149,7 +154,8 @@
     "longitude": -110.3,
     "slides": 6,
     "galleryClass": "col-span-10 rounded-r-xl",
-    "socialDisplay": "hidden"
+    "socialDisplay": "hidden",
+    "video": "videos/LP.mp4"
   },
   "la-baja": {
     "name": "La Baja",
@@ -172,6 +178,7 @@
     "longitude": -110.3,
     "slides": 6,
     "galleryClass": "col-span-10 rounded-r-xl",
-    "socialDisplay": "hidden"
+    "socialDisplay": "hidden",
+    "video": "videos/LB.mp4"
   }
 }

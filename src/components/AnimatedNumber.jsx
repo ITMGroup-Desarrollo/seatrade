@@ -8,7 +8,7 @@ export default function AnimatedNumber({ value, duration = 500 }) {
     if (typeof value !== "number" || isNaN(value)) return;
 
     let start = 0;
-    const increment = value / (duration / 16); 
+    const increment = value / (duration / 16);
 
     const animate = () => {
       start += increment;
