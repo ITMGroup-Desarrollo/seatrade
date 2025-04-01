@@ -3,6 +3,7 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import Card from "./Card";
 import usePort from "../hooks/use-port";
+import Separador from "./Separador";
 
 import logoInstagram from "../assets/instagram-white.svg";
 
@@ -111,18 +112,16 @@ export default function Carousel() {
       <div
         className={`text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[var(--color-secondary)]/50 h-full pr-4 py-4 gap-2 rounded-r-xl ${port.socialDisplay}`}
       >
-        <Card className="row-span-1 grid grid-cols-2 grid-rows-1">
+        <Card className="row-span-1 flex">
           <div  className="self-center text-center flex flex-row justify-center items-center z-10">
             <img
               src={logoInstagram.src}
               alt="instagram"
               className="w-16 ml-4"
             />
-            <p className="text-5xl font-thin opacity-70 self-center mb-3 ml-6">
-              |
-            </p>
+            
           </div>
-
+          <Separador />
           <div  className="self-center text-center text-6xl justify-center flex mb-2 font-semibold z-10 ">
             <p key={eventKey} className="animate-fadeIn">{port.followers}</p>
           </div>
