@@ -5,7 +5,7 @@ const DEFAULT_PORT = "cabo-rojo";
 
 const usePort = create((set, get) => ({
   port: dataPorts[DEFAULT_PORT],
-  hoveredPort: null,
+  hoveredPort: "Cabo Rojo",
   setPort: (portId) => {
     const selectedPort = dataPorts[portId];
     set({ port: selectedPort });
