@@ -7,20 +7,38 @@ export default function Popup() {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    if (!videoRef.current) return; // Evita errores si aún no está asignado
+    if (!videoRef.current || !videoPort) return;
+
+    const videoElement = videoRef.current;
+
+    videoElement.pause();
+    videoElement.currentTime = 0;
+    videoElement.load();
+
+    const playPromise = videoElement.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch((error) => {
+        console.error("Autoplay prevented:", error);
+      });
+    }
 
     const handleVideoEnd = () => {
-      if (popupRef.current) {
-        popupRef.current.classList.add("hidden"); // Oculta el popup al terminar el video
-      }
+      popupRef.current?.classList.add("hidden");
     };
 
-    videoRef.current.addEventListener("ended", handleVideoEnd);
+    videoElement.addEventListener("ended", handleVideoEnd);
 
     return () => {
-      videoRef.current?.removeEventListener("ended", handleVideoEnd);
+      videoElement.removeEventListener("ended", handleVideoEnd);
     };
   }, [videoPort]);
+
+  const closePopup = () => {
+    if (popupRef.current) {
+      popupRef.current.classList.add("hidden");
+    }
+  };
 
   return (
     <div
@@ -31,6 +49,7 @@ export default function Popup() {
       <div className="popup-contenido bg-[var(--color-secondary)]/80 p-5 rounded-xl text-center relative w-full h-full">
         <span
           id="cerrar-popup"
+          onClick={() => videoRef.current?.pause()}
           className="cerrar-popup absolute top-6 right-10 cursor-pointer text-[var(--color-blue-text)] p-3 bg-white rounded-full z-30"
         >
           <svg
@@ -45,15 +64,19 @@ export default function Popup() {
             />
           </svg>
         </span>
-        {videoPort}
+        {/* <a target="_blank" href={`http://localhost:4321/seatrade/${videoPort}`}>
+          http://localhost:4321/seatrade/{videoPort}
+        </a> */}
         <video
           id="popup-video"
+          key={videoPort}
           ref={videoRef}
           className="w-full h-full object-cover"
           controls={false}
           autoPlay
+          muted
         >
-          {/* <source src={videoPort} type="video/mp4" /> */}
+          <source src={videoPort} type="video/mp4" />
         </video>
       </div>
     </div>

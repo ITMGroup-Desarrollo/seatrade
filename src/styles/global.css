@@ -34,13 +34,14 @@
   fill: #4990c8;
   stroke: #4990c8;
 }
-.containerMap path.state:hover {
+/* .containerMap path.state:hover {
   fill: white;
   stroke: white;
-}
+} */
 .containerMap path.state-active {
-  stroke: white !important;
-  fill: white !important;
+  stroke: #00ffff !important;
+  fill: #00ffff !important;
+  filter: drop-shadow(0 0 5px #00ffff);
 }
 .bg-custom-gradient {
   background: linear-gradient(
