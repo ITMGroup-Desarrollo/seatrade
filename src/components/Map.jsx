@@ -12,33 +12,20 @@ import logoLaBaja from "../assets/images/logo-labaja.svg";
 
 export default function Map() {
   const port = usePort();
-  console.log(port.hoveredPort);
+  // console.log(port.hoveredPort);
 
   const popup = document.getElementById("popup");
-  const botonCerrarPopup = document.getElementById("cerrar-popup");
 
-  const changePort = (portId, e) => {
-    console.log(e);
-
+  const changePort = (portId) => {
     port.setPort(portId);
     mostrarPopup();
     // console.log(port.port);
   };
 
   function mostrarPopup() {
-    popup.style.display = "flex";
+    popup.classList.remove("hidden");
+    popup.classList.add("flex");
   }
-
-  function ocultarPopup() {
-    popup.style.display = "none";
-  }
-
-  botonCerrarPopup.addEventListener("click", ocultarPopup);
-  window.addEventListener("click", (event) => {
-    if (event.target === popup) {
-      ocultarPopup();
-    }
-  });
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

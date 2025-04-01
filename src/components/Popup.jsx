@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import usePort from "../hooks/use-port";
 
 export default function Popup() {
@@ -11,7 +11,7 @@ export default function Popup() {
 
     const videoElement = videoRef.current;
 
-    videoElement.pause();
+    // Reiniciar el video
     videoElement.currentTime = 0;
     videoElement.load();
 
@@ -24,7 +24,8 @@ export default function Popup() {
     }
 
     const handleVideoEnd = () => {
-      popupRef.current?.classList.add("hidden");
+      closePopup();
+      console.log("el video termino");
     };
 
     videoElement.addEventListener("ended", handleVideoEnd);
@@ -35,8 +36,11 @@ export default function Popup() {
   }, [videoPort]);
 
   const closePopup = () => {
-    if (popupRef.current) {
+    if (videoRef.current) {
+      popupRef.current.classList.remove("flex");
       popupRef.current.classList.add("hidden");
+      // videoRef.current.pause();
+      videoRef.current.currentTime = 0;
     }
   };
 
@@ -49,7 +53,7 @@ export default function Popup() {
       <div className="popup-contenido bg-[var(--color-secondary)]/80 p-5 rounded-xl text-center relative w-full h-full">
         <span
           id="cerrar-popup"
-          onClick={() => videoRef.current?.pause()}
+          onClick={closePopup}
           className="cerrar-popup absolute top-6 right-10 cursor-pointer text-[var(--color-blue-text)] p-3 bg-white rounded-full z-30"
         >
           <svg
@@ -64,9 +68,6 @@ export default function Popup() {
             />
           </svg>
         </span>
-        {/* <a target="_blank" href={`http://localhost:4321/seatrade/${videoPort}`}>
-          http://localhost:4321/seatrade/{videoPort}
-        </a> */}
         <video
           id="popup-video"
           key={videoPort}
