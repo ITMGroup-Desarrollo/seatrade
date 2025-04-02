@@ -27,12 +27,15 @@ export default function Arrivals() {
 
   return (
     <div
-      className={`father h-full pl-7 pr-8  py-4 ${
+      className={`father h-full pl-7 pr-8  pt-4 ${
         !calls || calls.length === 0 ? "hidden" : "block"
       }`}
     >
       <div className="grid grid-rows-5 h-full rounded-xl bg-[var(--color-secondary)]/50 border-2 border-[var(--color-fifth-border)] gap-2">
-        <div key={eventKey} className="row-span-1 text-white text-3xl font-bold uppercase content-center text-center animate-fadeIn">
+        <div
+          key={eventKey}
+          className="row-span-1 text-white text-3xl font-bold uppercase content-center text-center animate-fadeIn"
+        >
           Arrivals&nbsp;in <br /> {name}
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
@@ -41,7 +44,10 @@ export default function Arrivals() {
               <img src={CallsIcon.src} alt="calls" className="w-12 z-10 " />
               <p className="textArrivals font-medium">CALLS</p>
             </div>
-             <RuedaCalls key={eventKey} className="calls-container animate-fadeIn"/>
+            <RuedaCalls
+              key={eventKey}
+              className="calls-container animate-fadeIn"
+            />
           </div>
 
           <div className="row-span-1 text-center content-center text-white font-bold text-5xl ">

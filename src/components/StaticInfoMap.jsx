@@ -8,7 +8,7 @@ export default function StaticInfoMap() {
       <Card className=" flex w-2/4 mr-10">
         <div className="flex items-center">
           <div className="text-5xl mr-2 text-white font-bold">
-            <AnimatedNumber value={1646} duration={500} />
+            <AnimatedNumber value={1646} duration={1500} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
             <span className="text-sm text-[var(--color-blue-text)] leading-none">
@@ -24,7 +24,7 @@ export default function StaticInfoMap() {
 
         <div className="flex items-center">
           <div className="text-5xl mr-2 text-white font-bold">
-            <AnimatedNumber value={6358445} duration={500} />
+            <AnimatedNumber value={6358445} duration={2200} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
             <span className="text-sm text-[var(--color-blue-text)] leading-none">
@@ -39,7 +39,7 @@ export default function StaticInfoMap() {
       <Card className=" flex w-1/4 mr-10">
         <div className="flex items-center">
           <div className="text-5xl mr-2 text-white font-bold">
-            <AnimatedNumber value={7} duration={500} />
+            <AnimatedNumber value={7} duration={1000} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
             <span className="text-sm text-[var(--color-blue-text)] leading-none">
@@ -83,7 +83,7 @@ export default function StaticInfoMap() {
             <div className="flex uppercase font-bold">
               <div className="text-4xl mr-2 text-white font-bold leading-none">
                 <p className="leading-none">
-                  <AnimatedNumber value={96} duration={500} />%
+                  <AnimatedNumber value={96} duration={1500} />%
                 </p>
               </div>
               <div className="flex flex-col justify-center">

@@ -12,10 +12,11 @@ import LogoITM from "../assets/images/logo-itm.svg";
 ---
 
 <div
-  class="parent h-screen grid grid-rows-8 grid-cols-16 bg-cover bg-center"
+  class="parent containerMap h-screen grid grid-rows-8 grid-cols-16 bg-cover bg-center overflow-hidden"
   style={`background-image: url(${BgMap.src});`}
 >
-  <div class="map row-span-5 col-span-13 relative containerMap h-full w-full">
+  <div class="map row-span-5 col-span-13 relative h-full w-full">
+    <Map client:only />
     <div class="absolute top-12 left-1/2 transform -translate-x-1/2">
       <p
         class="text-white text-5xl uppercase font-bold text-center drop-shadow-[2px_2px_4px_#000000ab] pl-8"
@@ -31,7 +32,8 @@ import LogoITM from "../assets/images/logo-itm.svg";
         > TO THE WORLD
       </p>
     </div>
-    <Map client:only />
+    <!-- <Map client:only /> -->
+    <!-- <img src="public/images/MAPA.jpg" alt="" /> -->
     <StaticInfoMap client:only />
     <Popup client:only />
   </div>

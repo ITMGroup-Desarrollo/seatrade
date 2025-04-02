@@ -5,8 +5,10 @@ export default function Pax() {
   const pax = usePort((state) => state.port.pax);
 
   return (
-    <div>
-      <h2><AnimatedNumber value={pax} duration={500} /></h2>
+    <div className="pb-3">
+      <h2>
+        <AnimatedNumber value={pax} duration={500} />
+      </h2>
     </div>
   );
 }
