@@ -27,7 +27,7 @@ export default function AnimatedNumber({ value, duration = 500 }) {
     <motion.span
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 10 }}
+      transition={{ duration: 0.5 }}
     >
       {count.toLocaleString()}
     </motion.span>
