@@ -82,12 +82,12 @@ export default function Carousel() {
             {port.country}
           </div>
         </Card>
-        <Card className="row-span-1 flex h-full">
-          <img key={eventKey} className="h-5/6 animate-fadeIn py-0 my-0" src={port.logo} alt="logo-taino" />
+        <Card className="row-span-1 flex ">
+          <img key={eventKey} className="h-5/6 animate-fadeIn" src={port.logo} alt="logo-taino" />
         </Card>
       </div>
       <div
-        className={`col-span-8 w-full bg-[var(--color-secondary)]/50 h-full justify-baseline items-center flex p-6 ${port.galleryClass}`}
+        className={`col-span-8 w-full bg-[var(--color-secondary)]/50 h-full justify-baseline items-center flex p-5 ${port.galleryClass}`}
       >
         <div className="swiper carrusel-container h-full rounded-xl bg-[var(--color-tertiary)]/40">
           <div  className="swiper-wrapper w-full">
