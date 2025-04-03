@@ -20,7 +20,7 @@ export default function StaticInfoMap() {
           </div>
         </div>
 
-        <Separador className="mx-3"/>
+        <Separador className="mx-3 3xl:mx-10"/>
 
         <div className="flex items-center">
           <div className="text-3xl 3xl:text-5xl mr-2 text-white font-bold">
@@ -51,7 +51,7 @@ export default function StaticInfoMap() {
           </div>
         </div>
 
-        <Separador className="mx-2" />
+        <Separador className="mx-2 3xl:mx-3" />
 
         <div className="flex items-center">
           <div className="text-3xl 3xl:text-5xl mr-2 text-white font-bold">
