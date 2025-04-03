@@ -71,7 +71,7 @@ export default function StaticInfoMap() {
               src={happyIcon.src}
               width={45}
               alt="Happy Icon"
-              className="drop-shadow-[0_0_5px_#54c0e8]"
+              className="drop-shadow-[0_0_5px_#54c0e8] happyFace"
             />
           </div>
           <div>
