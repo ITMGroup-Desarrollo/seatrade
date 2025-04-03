@@ -12,7 +12,7 @@ const usePort = create((set, get) => ({
   },
   setHoveredPort: (portId) => {
     const selectedPort2 = dataPorts[portId]?.name;
-    console.log(selectedPort2);
+    // console.log(selectedPort2);
 
     set({ hoveredPort: selectedPort2 });
   },
