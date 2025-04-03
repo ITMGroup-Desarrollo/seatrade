@@ -98,7 +98,6 @@
 
 .card {
   position: relative;
-  padding: 1rem;
   border: none;
   border-radius: 0.75rem;
 }
@@ -142,27 +141,22 @@
 .segment-top {
   border: solid 1rem transparent;
   border-right-color: aqua;
-  animation: showBorder 1s linear;
-  animation-fill-mode: forwards;
+  animation: showBorder 1s linear forwards, pulseGlow 1.5s infinite ease-in-out;
 }
 .segment-right {
   border-right-color: transparent;
 }
 .segment-bottom {
-  animation: turnBottom 1s ease-in-out;
-  animation-fill-mode: forwards;
+  animation: turnBottom 1s ease-in-out forwards, pulseGlow 1.5s infinite ease-in-out;
 }
 .segment-left {
-  animation: turnLeft 1s ease-in-out;
-  animation-fill-mode: forwards;
+  animation: turnLeft 1s ease-in-out forwards, pulseGlow 1.5s infinite ease-in-out;
 }
 .calls-container .segment-top {
-  animation: turnTop 1s ease-in-out;
-  animation-fill-mode: forwards;
+  animation: turnTop2 1s ease-in-out forwards, pulseGlow 1.5s infinite ease-in-out;
 }
 .pax-container .segment-top {
-  animation: turnTop2 1s ease-in-out;
-  animation-fill-mode: forwards;
+  animation: turnTop2 1s ease-in-out forwards, pulseGlow 1.5s infinite ease-in-out;
 }
 @keyframes turnBottom {
   0% {
@@ -210,3 +204,12 @@
     animation: fadeIn 0.6s ease-in-out forwards;
   }
 }
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px aqua);
+  }
+  50% {
+    filter: drop-shadow(0 0 5px aqua);
+  }
+}
+
