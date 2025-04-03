@@ -197,7 +197,7 @@ export default function Maps() {
           <path
             id="ROATAN"
             className={
-              port.port.name === "Roatán" || port.hoveredPort === "Roatán"
+              port.port.name === "Roatan" || port.hoveredPort === "Roatan"
                 ? "state-active"
                 : ""
             }

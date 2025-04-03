@@ -26,11 +26,11 @@ export default function Carousel() {
         disableOnInteraction: false,
       },
       on: {
-        init: (swiper) => swiper.slideTo(0, 0, false), 
+        init: (swiper) => swiper.slideTo(0, 0, false),
       },
     });
 
-    swiperRef.current.slideTo(0, 0, false); 
+    swiperRef.current.slideTo(0, 0, false);
   };
 
   useEffect(() => {
@@ -43,12 +43,12 @@ export default function Carousel() {
         swiperRef.current.destroy(true, true);
       }
     };
-  }, [slides, port]); 
+  }, [slides, port]);
   useEffect(() => {
     const resetSwiper = () => {
       if (swiperRef.current) {
-        swiperRef.current.destroy(true, true); 
-        initializeSwiper(); 
+        swiperRef.current.destroy(true, true);
+        initializeSwiper();
       }
     };
     const resetEvent = () => {
@@ -62,8 +62,6 @@ export default function Carousel() {
       icons.forEach((icon) => icon.removeEventListener("click", resetSwiper));
       icons.forEach((icon) => icon.removeEventListener("click", resetEvent));
     };
-
-    
   }, []);
 
   return (
@@ -82,8 +80,8 @@ export default function Carousel() {
             {port.country}
           </div>
         </Card> */}
-        <Card  className="flex">
-          <div  className="justify-center self-center text-center rounded-xl h-full w-auto ">
+        <Card className="flex">
+          <div className="justify-center self-center text-center rounded-xl h-full w-auto ">
             <img
               src={port.flag}
               alt="dominican-flag"
@@ -93,14 +91,19 @@ export default function Carousel() {
           </div>
         </Card>
         <Card className="row-span-1 flex p-2">
-          <img key={eventKey} className="h-5/6 animate-fadeIn" src={port.logo} alt="logo-taino" />
+          <img
+            key={eventKey}
+            className="h-5/6 animate-fadeIn"
+            src={port.logo}
+            alt="logo-taino"
+          />
         </Card>
       </div>
       <div
         className={`col-span-8 w-full bg-[var(--color-secondary)]/50 h-full justify-baseline items-center flex p-5 ${port.galleryClass}`}
       >
         <div className="swiper carrusel-container h-full rounded-xl bg-[var(--color-tertiary)]/40">
-          <div  className="swiper-wrapper w-full">
+          <div className="swiper-wrapper w-full">
             {port.gallery.map((image, index) => (
               <div
                 key={index}
@@ -123,27 +126,36 @@ export default function Carousel() {
         className={`text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[var(--color-secondary)]/50 h-full pr-4 py-4 gap-2 rounded-r-xl ${port.socialDisplay}`}
       >
         <Card className="row-span-1 flex">
-          <div  className="self-center text-center flex flex-row justify-center items-center z-10">
-            <img
-              src={logoInstagram.src}
-              alt="instagram"
-              className="w-16 "
-            />
-            
+          <div className="self-center text-center flex flex-row justify-center items-center z-10">
+            <img src={logoInstagram.src} alt="instagram" className="w-16 " />
           </div>
-          <Separador className="max-h-2/3 md:mx-7"/>
-          <div  className="self-center text-center text-5xl justify-center flex mb-2 font-semibold z-10 ">
-            <p key={eventKey} className="animate-fadeIn">{port.followers}</p>
+          <Separador className="max-h-2/3 md:mx-7" />
+          <div className="self-center text-center text-5xl justify-center flex mb-2 font-semibold z-10 ">
+            <p key={eventKey} className="animate-fadeIn">
+              {port.followers}
+            </p>
           </div>
         </Card>
 
-        <Card className="row-span-1 flex flex-col content-center py-0.5
-        ">
-          <p key={eventKey} className="text-xl font-semibold animate-fadeIn">{port.instagram}</p>
+        <Card
+          className="row-span-1 flex flex-col content-center py-0.5
+        "
+        >
+          <p key={eventKey} className="text-xl font-semibold animate-fadeIn">
+            {port.instagram}
+          </p>
           <div>
-            <img key={eventKey} className="animate-fadeIn" src={port.qr} width={70} alt="" />
+            <img
+              key={eventKey}
+              className="animate-fadeIn"
+              src={port.qr}
+              width={70}
+              alt=""
+            />
           </div>
-          <p className="uppercase text-xl font-semibold animate-fadeIn">Follow Us!</p>
+          <p className="uppercase text-xl font-semibold animate-fadeIn">
+            Follow Us!
+          </p>
         </Card>
       </div>
     </div>

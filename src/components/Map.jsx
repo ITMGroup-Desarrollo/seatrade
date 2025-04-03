@@ -1139,7 +1139,7 @@ export default function Map() {
         <path
           id="HN-IB"
           className={
-            port.port.name === "Roatán" || port.hoveredPort === "Roatán"
+            port.port.name === "Roatan" || port.hoveredPort === "Roatan"
               ? "state-active"
               : ""
           }

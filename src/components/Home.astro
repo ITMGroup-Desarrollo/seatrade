@@ -9,6 +9,7 @@ import { Image } from "astro:assets";
 
 import BgMap from "../assets/images/bg-map.jpg";
 import LogoITM from "../assets/images/logo-itm.svg";
+import CubeAnimation from "./CubeAnimation";
 ---
 
 <div
@@ -17,6 +18,7 @@ import LogoITM from "../assets/images/logo-itm.svg";
 >
   <div class="map row-span-5 col-span-13 relative h-full w-full">
     <Map client:only />
+    <CubeAnimation client:only />
     <div class="absolute top-12 left-1/2 transform -translate-x-1/2">
       <p
         class="text-white text-5xl uppercase font-bold text-center drop-shadow-[2px_2px_4px_#000000ab] pl-8"
@@ -40,7 +42,7 @@ import LogoITM from "../assets/images/logo-itm.svg";
   <div class="arrivals row-span-5 col-span-3 bg-transparent">
     <Arrivals client:only />
   </div>
-  <div class="carousel row-span-3 col-span-16 bg-transparent">
+  <div class="carousel row-span-3 col-span-16 bg-transparent z-10">
     <Carousel client:load />
   </div>
 </div>
