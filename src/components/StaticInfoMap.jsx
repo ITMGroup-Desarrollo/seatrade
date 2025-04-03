@@ -1,7 +1,7 @@
 import Card from "./Card";
 import Separador from "./Separador";
 import AnimatedNumber from "../components/AnimatedNumber";
-import happyIcon from "../assets/images/icon-happy.svg";
+import happyIcon from "../assets/images/icono-feliz.gif";
 export default function StaticInfoMap() {
   return (
     <div className="pl-8 flex absolute bottom-0 w-full justify-around">
