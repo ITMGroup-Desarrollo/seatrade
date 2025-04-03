@@ -69,8 +69,8 @@ export default function Carousel() {
   return (
     <div className="grid grid-rows-1 grid-cols-12 h-full px-8 py-4">
       <div className="text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[var(--color-secondary)]/50  h-full py-4 pl-4 gap-2 rounded-l-xl">
-        <Card  className="row-span-1 grid grid-cols-2 grid-rows-1 ">
-          <div  className="col-span-1 justify-center self-center text-center rounded-xl h-full w-auto ">
+        <Card  className="row-span-1 grid grid-cols-2 grid-rows-1 md:px-2">
+          <div  className="col-span-1 justify-center self-center text-center rounded-xl h-full w-auto p-2">
             <img
               src={port.flag}
               alt="dominican-flag"
@@ -82,7 +82,7 @@ export default function Carousel() {
             {port.country}
           </div>
         </Card>
-        <Card className="row-span-1 flex ">
+        <Card className="row-span-1 flex p-2">
           <img key={eventKey} className="h-5/6 animate-fadeIn" src={port.logo} alt="logo-taino" />
         </Card>
       </div>

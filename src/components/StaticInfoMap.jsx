@@ -11,10 +11,10 @@ export default function StaticInfoMap() {
             <AnimatedNumber value={1646} duration={500} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-xl text-[var(--color-blue-text)] leading-none">
               Total
             </span>
-            <span className="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-xl text-[var(--color-blue-text)] leading-none">
               Calls
             </span>
           </div>
@@ -27,10 +27,10 @@ export default function StaticInfoMap() {
             <AnimatedNumber value={6358445} duration={500} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-xl text-[var(--color-blue-text)] leading-none">
               Total
             </span>
-            <span className="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-xl text-[var(--color-blue-text)] leading-none">
               pax
             </span>
           </div>
@@ -42,23 +42,23 @@ export default function StaticInfoMap() {
             <AnimatedNumber value={7} duration={500} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-xl text-[var(--color-blue-text)] leading-none">
               cruise port
             </span>
-            <span className="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-xl text-[var(--color-blue-text)] leading-none">
               destinations
             </span>
           </div>
         </div>
 
-        <Separador />
+        <Separador className="md:mx-3" />
 
         <div className="flex items-center">
           <div className="text-5xl mr-2 text-white font-bold">
             <AnimatedNumber value={3} duration={700} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-sm text-[var(--color-blue-text)] leading-none">
+            <span className="text-xl text-[var(--color-blue-text)] leading-none">
               countries
             </span>
           </div>
