@@ -8,7 +8,7 @@ export default function AnimatedNumber({ value, duration = 500 }) {
     if (typeof value !== "number" || isNaN(value)) return;
 
     let start = 0;
-    const increment = value / (duration / 16);
+    const increment = value / (duration / 14);
 
     const animate = () => {
       start += increment;
@@ -27,7 +27,7 @@ export default function AnimatedNumber({ value, duration = 500 }) {
     <motion.span
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
     >
       {count.toLocaleString()}
     </motion.span>

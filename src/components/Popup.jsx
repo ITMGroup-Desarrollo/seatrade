@@ -25,7 +25,6 @@ export default function Popup() {
 
     const handleVideoEnd = () => {
       closePopup();
-      console.log("el video termino");
     };
 
     videoElement.addEventListener("ended", handleVideoEnd);
@@ -48,7 +47,7 @@ export default function Popup() {
     <div
       id="popup"
       ref={popupRef}
-      className="popup absolute z-[999999] top-0 left-0 w-full h-full justify-center items-center hidden"
+      className="popup absolute z-[999999] top-0 left-0 w-full h-full justify-center items-center hidden pl-8 pt-4"
     >
       <div className="popup-contenido bg-[var(--color-secondary)]/80 p-5 rounded-xl text-center relative w-full h-full">
         <span
@@ -72,7 +71,7 @@ export default function Popup() {
           id="popup-video"
           key={videoPort}
           ref={videoRef}
-          className="w-full h-full object-cover"
+          className="w-full h-full"
           controls={false}
           autoPlay
           muted
