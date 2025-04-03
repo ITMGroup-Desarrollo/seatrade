@@ -98,7 +98,7 @@ export default function Carousel() {
               >
                 <div className="h-full flex flex-col justify-center items-center px-4 py-4">
                   <img
-                    className="h-full w-full rounded-xl animate-fadeIn"
+                    className="h-full w-full rounded-xl animate-fadeIn object-cover"
                     src={image}
                     key={eventKey}
                     alt={`gallery-image-${index}`}
