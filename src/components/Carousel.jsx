@@ -69,7 +69,7 @@ export default function Carousel() {
   return (
     <div className="grid grid-rows-1 grid-cols-12 h-full px-8 py-4">
       <div className="text-white col-span-2 grid grid-cols-1 grid-rows-2 bg-[var(--color-secondary)]/50  h-full py-4 pl-4 gap-2 rounded-l-xl">
-        <Card  className="row-span-1 grid grid-cols-2 grid-rows-1 md:px-2">
+        {/* <Card  className="row-span-1 grid grid-cols-2 grid-rows-1 md:px-2">
           <div  className="col-span-1 justify-center self-center text-center rounded-xl h-full w-auto p-2">
             <img
               src={port.flag}
@@ -80,6 +80,16 @@ export default function Carousel() {
           </div>
           <div key={eventKey} className="col-span-1 justify-center self-center text-center text-lg font-semibold uppercase animate-fadeIn">
             {port.country}
+          </div>
+        </Card> */}
+        <Card  className="flex">
+          <div  className="justify-center self-center text-center rounded-xl h-full w-auto ">
+            <img
+              src={port.flag}
+              alt="dominican-flag"
+              key={eventKey}
+              className="h-full w-auto animate-fadeIn"
+            />
           </div>
         </Card>
         <Card className="row-span-1 flex p-2">
@@ -127,12 +137,13 @@ export default function Carousel() {
           </div>
         </Card>
 
-        <Card className="row-span-1 flex flex-col content-center
+        <Card className="row-span-1 flex flex-col content-center py-0.5
         ">
-          <p key={eventKey} className="text-2xl font-semibold animate-fadeIn">{port.instagram}</p>
+          <p key={eventKey} className="text-xl font-semibold animate-fadeIn">{port.instagram}</p>
           <div>
-            <img key={eventKey} className="animate-fadeIn" src={port.qr} width={80} alt="" />
+            <img key={eventKey} className="animate-fadeIn" src={port.qr} width={70} alt="" />
           </div>
+          <p className="uppercase text-xl font-semibold animate-fadeIn">Follow Us!</p>
         </Card>
       </div>
     </div>
