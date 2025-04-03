@@ -34,14 +34,14 @@ export default function Arrivals() {
       <div className="grid grid-rows-5 h-full rounded-xl bg-[var(--color-secondary)]/50 border-2 border-[var(--color-fifth-border)] gap-2">
         <div
           key={eventKey}
-          className="row-span-1 text-white text-3xl font-bold uppercase content-center text-center animate-fadeIn"
+          className="row-span-1 text-white text-xl 3xl:text-3xl font-bold uppercase content-center text-center animate-fadeIn"
         >
           Arrivals&nbsp;in <br /> {name}
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
           <div className="relative row-span-2 flex justify-center items-center text-center">
-            <div>
-              <img src={CallsIcon.src} alt="calls" className="w-12 z-10 " />
+            <div className="flex flex-col items-center justify-center ">
+              <img src={CallsIcon.src} alt="calls" className="w-10 3xl:w-12 z-10 " />
               <p className="textArrivals font-medium">CALLS</p>
             </div>
             <RuedaCalls
@@ -50,19 +50,19 @@ export default function Arrivals() {
             />
           </div>
 
-          <div className="row-span-1 text-center content-center text-white font-bold text-5xl ">
+          <div className="row-span-1 text-center content-center text-white font-bold text-3xl 3xl:text-5xl ">
             <Calls />
           </div>
         </div>
         <div className="row-span-2 grid grid-rows-3 ">
           <div className="pax-Container relative row-span-2 flex justify-center items-center text-center ">
-            <div>
-              <img src={PaxIcon.src} alt="Pax" className="w-12 z-10 " />
+            <div className="flex flex-col items-center justify-center ">
+              <img src={PaxIcon.src} alt="Pax" className="w-10 3xl:w-12 z-10 " />
               <p className="textArrivals font-medium">PAX</p>
             </div>
             <RuedaPax key={eventKey} className="pax-container animate-fadeIn" />
           </div>
-          <div className="row-span-1 text-center content-center text-white font-semibold text-5xl">
+          <div className="row-span-1 text-center content-center text-white font-semibold text-3xl 3xl:text-5xl">
             <Pax />
           </div>
         </div>

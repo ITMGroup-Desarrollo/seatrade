@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@theme {
+  --breakpoint-3xl: 120rem;
+  --text-tiny: 0.625rem;
+}
 
 @keyframes markerAnimation {
   0% {
@@ -225,6 +229,9 @@
     filter: drop-shadow(0 0 2px aqua);
   }
   50% {
-    filter: drop-shadow(0 0 5px aqua);
+    filter: drop-shadow(0 0 7px aqua);
   }
 }
+/* .happyFace{
+  animation:pulseGlow 1.5s infinite ease-in-out;
+} */

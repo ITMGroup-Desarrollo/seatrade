@@ -18,9 +18,12 @@ export default function Carousel() {
       swiperRef.current.destroy(true, true);
     }
 
+    const getSlidesPerView = () =>
+      window.innerWidth >= 1600 ? slides : slides - 2;
+
     swiperRef.current = new Swiper(".carrusel-container", {
       loop: true,
-      slidesPerView: slides,
+      slidesPerView: getSlidesPerView(),
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -32,7 +35,13 @@ export default function Carousel() {
 
     swiperRef.current.slideTo(0, 0, false);
   };
-
+  //En caso de querer hacer dinamico el resize de la ventana
+  // window.addEventListener("resize", () => {
+  //   if (swiperRef.current) {
+  //     swiperRef.current.params.slidesPerView = getSlidesPerView();
+  //     swiperRef.current.update();
+  //   }
+  // });
   useEffect(() => {
     if (typeof window !== "undefined" && slides) {
       initializeSwiper();
@@ -107,7 +116,7 @@ export default function Carousel() {
             {port.gallery.map((image, index) => (
               <div
                 key={index}
-                className="swiper-slide h-full flex items-center justify-center text-white text-xl font-bold"
+                className="swiper-slide h-full flex items-center justify-center"
               >
                 <div className="h-full flex flex-col justify-center items-center px-4 py-4">
                   <img
@@ -127,10 +136,14 @@ export default function Carousel() {
       >
         <Card className="row-span-1 flex">
           <div className="self-center text-center flex flex-row justify-center items-center z-10">
-            <img src={logoInstagram.src} alt="instagram" className="w-16 " />
+            <img
+              src={logoInstagram.src}
+              alt="instagram"
+              className="w-10 3xl:w-16 "
+            />
           </div>
-          <Separador className="max-h-2/3 md:mx-7" />
-          <div className="self-center text-center text-5xl justify-center flex mb-2 font-semibold z-10 ">
+          <Separador className="max-h-2/3 mx-4 3xl:mx-7" />
+          <div className="self-center text-center text-3xl 3xl:text-5xl justify-center flex mb-2 font-semibold z-10 ">
             <p key={eventKey} className="animate-fadeIn">
               {port.followers}
             </p>
@@ -141,7 +154,10 @@ export default function Carousel() {
           className="row-span-1 flex flex-col content-center py-0.5
         "
         >
-          <p key={eventKey} className="text-xl font-semibold animate-fadeIn">
+          <p
+            key={eventKey}
+            className="text-xs 3xl:text-xl font-semibold animate-fadeIn"
+          >
             {port.instagram}
           </p>
           <div>
@@ -153,7 +169,7 @@ export default function Carousel() {
               alt=""
             />
           </div>
-          <p className="uppercase text-xl font-semibold animate-fadeIn">
+          <p className="uppercase text-xs 3xl:text-xl font-semibold animate-fadeIn">
             Follow Us!
           </p>
         </Card>
