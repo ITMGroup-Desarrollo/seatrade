@@ -1149,8 +1149,8 @@ export default function Map() {
       {/* Costa Maya */}
       <image
         id="costa-maya-mark"
-        x="822"
-        y="810"
+        x="818"
+        y="838"
         width="30"
         height="30"
         href={mapMarker.src}
@@ -1162,8 +1162,8 @@ export default function Map() {
       />
       <image
         id="costa-maya-logo"
-        x="800"
-        y="745"
+        x="848"
+        y="810"
         width="75"
         height="75"
         href={logoCostamaya.src}
@@ -1176,8 +1176,8 @@ export default function Map() {
       {/* roatan */}
       <image
         id="roatan-mark"
-        x="860"
-        y="892"
+        x="850"
+        y="895"
         width="30"
         height="30"
         href={mapMarker.src}
@@ -1189,8 +1189,8 @@ export default function Map() {
       />
       <image
         id="roatan-logo"
-        x="850"
-        y="842"
+        x="882"
+        y="872"
         width="50"
         height="50"
         href={logoRoatan.src}
@@ -1216,7 +1216,7 @@ export default function Map() {
       />
       <image
         id="taino-bay-logo"
-        x="1040"
+        x="1039"
         y="700"
         width="85"
         height="85"
@@ -1284,8 +1284,8 @@ export default function Map() {
       {/* La Paz */}
       <image
         id="la-paz-mark"
-        x="255"
-        y="730"
+        x="249"
+        y="712"
         width="30"
         height="30"
         href={mapMarker.src}
@@ -1297,8 +1297,8 @@ export default function Map() {
       />
       <image
         id="la-paz-logo"
-        x="195"
-        y="708"
+        x="274"
+        y="694"
         width="65"
         height="65"
         href={logoLaPaz.src}
@@ -1311,8 +1311,8 @@ export default function Map() {
       {/* La Baja */}
       <image
         id="la-baja-mark"
-        x="120"
-        y="555"
+        x="88"
+        y="500"
         width="30"
         height="30"
         href={mapMarker.src}
@@ -1324,10 +1324,10 @@ export default function Map() {
       />
       <image
         id="la-baja-logo"
-        x="50"
-        y="540"
-        width="65"
-        height="65"
+        x="4"
+        y="508"
+        width="80"
+        height="35"
         href={logoLaBaja.src}
         onClick={() => changePort("la-baja")}
         style={{ cursor: "pointer" }}

@@ -23,15 +23,16 @@ export default function Popup() {
       });
     }
 
-    const handleVideoEnd = () => {
-      closePopup();
-    };
+    // const handleVideoEnd = () => {
+    //   videoElement.load();
+    //   // closePopup();
+    // };
 
-    videoElement.addEventListener("ended", handleVideoEnd);
+    // videoElement.addEventListener("ended", handleVideoEnd);
 
-    return () => {
-      videoElement.removeEventListener("ended", handleVideoEnd);
-    };
+    // return () => {
+    //   videoElement.removeEventListener("ended", handleVideoEnd);
+    // };
   }, [videoPort]);
 
   const closePopup = () => {
@@ -49,7 +50,7 @@ export default function Popup() {
       ref={popupRef}
       className="popup absolute z-[999999] top-0 left-0 w-full h-full justify-center items-center hidden pl-8 pt-4"
     >
-      <div className="popup-contenido bg-[var(--color-secondary)]/80 p-5 rounded-xl text-center relative w-full h-full">
+      <div className="popup-contenido bg-[var(--color-secondary)] p-5 rounded-xl text-center relative w-full h-full">
         <span
           id="cerrar-popup"
           onClick={closePopup}
@@ -75,6 +76,7 @@ export default function Popup() {
           controls={false}
           autoPlay
           muted
+          loop
         >
           <source src={videoPort} type="video/mp4" />
         </video>
