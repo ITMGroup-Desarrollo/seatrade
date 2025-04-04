@@ -88,7 +88,7 @@ export default function Map() {
       <div className="absolute top-0 left-0 p-4 z-[9999] flex justify-between w-full ">
         <div className="">
           <h1 className="uppercase text-4xl font-bold text-white">
-            From <span>LOGO</span> to the word
+            From <span>LOGO</span> to the world
           </h1>
         </div>
         <div className="flex space-x-4 text-white bg-white/50 rounded-md p-4">
