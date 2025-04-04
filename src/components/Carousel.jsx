@@ -163,9 +163,8 @@ export default function Carousel() {
           <div>
             <img
               key={eventKey}
-              className="animate-fadeIn"
+              className="animate-fadeIn py-1 3xl:py-0 w-14 3xl:w-16"
               src={port.qr}
-              width={70}
               alt=""
             />
           </div>
