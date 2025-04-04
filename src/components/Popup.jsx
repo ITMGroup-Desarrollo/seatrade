@@ -6,16 +6,20 @@ export default function Popup() {
   const popupRef = useRef(null);
   const videoRef = useRef(null);
 
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
   const port = usePort((state) => state.port);
 
   useEffect(() => {
     if (!videoRef.current || !videoPort) return;
 
     const videoElement = videoRef.current;
+    setIsPopupVisible(true);
 
     // Reiniciar el video
-    videoElement.currentTime = 0;
-    videoElement.load();
+    // videoElement.currentTime = 0;
+    // videoElement.load();
+    resetVideo();
 
     const playPromise = videoElement.play();
 
@@ -24,25 +28,26 @@ export default function Popup() {
         console.error("Autoplay prevented:", error);
       });
     }
-
-    // const handleVideoEnd = () => {
-    //   videoElement.load();
-    //   // closePopup();
-    // };
-
-    // videoElement.addEventListener("ended", handleVideoEnd);
-
-    // return () => {
-    //   videoElement.removeEventListener("ended", handleVideoEnd);
-    // };
   }, [videoPort]);
 
+  useEffect(() => {
+    if (isPopupVisible && videoRef.current) {
+      resetVideo();
+    }
+  }, [isPopupVisible]);
+
+  const resetVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.load();
+    }
+  };
   const closePopup = () => {
     if (videoRef.current) {
       popupRef.current.classList.remove("flex");
       popupRef.current.classList.add("hidden");
-      // videoRef.current.pause();
-      videoRef.current.currentTime = 0;
+      setIsPopupVisible(false);
+      resetVideo();
     }
   };
 
