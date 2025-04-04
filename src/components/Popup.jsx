@@ -6,6 +6,8 @@ export default function Popup() {
   const popupRef = useRef(null);
   const videoRef = useRef(null);
 
+  const port = usePort((state) => state.port);
+
   useEffect(() => {
     if (!videoRef.current || !videoPort) return;
 
@@ -49,6 +51,10 @@ export default function Popup() {
       id="popup"
       ref={popupRef}
       className="popup absolute z-[999999] top-0 left-0 w-full h-full justify-center items-center hidden pl-8 pt-4"
+      style={{
+        width: port.name === "Samana" ? "100vw" : "",
+        paddingRight: port.name === "Samana" ? "36px" : "",
+      }}
     >
       <div className="popup-contenido bg-[var(--color-secondary)] p-5 rounded-xl text-center relative w-full h-full">
         <span

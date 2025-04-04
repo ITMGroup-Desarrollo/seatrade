@@ -1,5 +1,5 @@
 export default function Cube({ delay, bottom, left, height, width }) {
-  console.log(delay);
+  // console.log(delay);
 
   return (
     <div
