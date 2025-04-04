@@ -16,9 +16,7 @@ export default function Popup() {
     const videoElement = videoRef.current;
     setIsPopupVisible(true);
 
-    // Reiniciar el video
-    // videoElement.currentTime = 0;
-    // videoElement.load();
+    // Reiniciar el video al abrir el popup
     resetVideo();
 
     const playPromise = videoElement.play();
