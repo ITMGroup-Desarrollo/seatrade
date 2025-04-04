@@ -19,7 +19,9 @@ import CubeAnimation from "./CubeAnimation";
   <div class="map row-span-5 col-span-13 relative h-full w-full">
     <CubeAnimation client:only />
     <Map client:only />
-    <div class="absolute top-12 left-1/2 transform -translate-x-1/2">
+    <div
+      class="hidden 3xl:flex absolute top-12 left-1/2 transform -translate-x-1/2"
+    >
       <p
         class="text-white text-5xl uppercase font-bold text-center drop-shadow-[2px_2px_4px_#000000ab] pl-8"
       >
@@ -32,6 +34,25 @@ import CubeAnimation from "./CubeAnimation";
             class="inline-block ml-2 mt-2.5"
           /></span
         > TO THE WORLD
+      </p>
+    </div>
+    <div
+      class="flex 3xl:hidden absolute top-12 left-1/2 transform -translate-x-1/2"
+    >
+      <p
+        class="text-white text-5xl uppercase font-bold text-center drop-shadow-[2px_2px_4px_#000000ab] pl-8 whitespace-nowrap"
+      >
+        FROM&nbsp;
+        <span class="inline-flex items-center">
+          <Image
+            src={LogoITM}
+            alt="Logo ITM Group"
+            width={140}
+            height={140}
+            class="inline-block ml-2 translate-y-5"
+          />
+        </span>
+        &nbsp;TO&nbsp;THE&nbsp;WORLD
       </p>
     </div>
     <!-- <Map client:only /> -->
