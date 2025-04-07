@@ -6,14 +6,18 @@ export default function Popup() {
   const popupRef = useRef(null);
   const videoRef = useRef(null);
 
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const port = usePort((state) => state.port);
+
   useEffect(() => {
     if (!videoRef.current || !videoPort) return;
 
     const videoElement = videoRef.current;
+    setIsPopupVisible(true);
 
-    // Reiniciar el video
-    videoElement.currentTime = 0;
-    videoElement.load();
+    // Reiniciar el video al abrir el popup
+    resetVideo();
 
     const playPromise = videoElement.play();
 
@@ -22,25 +26,26 @@ export default function Popup() {
         console.error("Autoplay prevented:", error);
       });
     }
-
-    // const handleVideoEnd = () => {
-    //   videoElement.load();
-    //   // closePopup();
-    // };
-
-    // videoElement.addEventListener("ended", handleVideoEnd);
-
-    // return () => {
-    //   videoElement.removeEventListener("ended", handleVideoEnd);
-    // };
   }, [videoPort]);
 
+  useEffect(() => {
+    if (isPopupVisible && videoRef.current) {
+      resetVideo();
+    }
+  }, [isPopupVisible]);
+
+  const resetVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.load();
+    }
+  };
   const closePopup = () => {
     if (videoRef.current) {
       popupRef.current.classList.remove("flex");
       popupRef.current.classList.add("hidden");
-      // videoRef.current.pause();
-      videoRef.current.currentTime = 0;
+      setIsPopupVisible(false);
+      resetVideo();
     }
   };
 
@@ -49,6 +54,10 @@ export default function Popup() {
       id="popup"
       ref={popupRef}
       className="popup absolute z-[999999] top-0 left-0 w-full h-full justify-center items-center hidden pl-8 pt-4"
+      style={{
+        width: port.name === "Samana" ? "100vw" : "",
+        paddingRight: port.name === "Samana" ? "36px" : "",
+      }}
     >
       <div className="popup-contenido bg-[var(--color-secondary)] p-5 rounded-xl text-center relative w-full h-full">
         <span

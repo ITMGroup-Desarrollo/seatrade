@@ -92,7 +92,7 @@
 }
 
 .animated-cube {
-  background: linear-gradient(90deg, #ffffff04, #ffffff11, #ffffff04);
+  background: linear-gradient(90deg, #ffffff04, #ffffff20, #ffffff04);
   background-size: 200% 100%;
   animation: gradientBorder2 2s linear infinite;
 }
