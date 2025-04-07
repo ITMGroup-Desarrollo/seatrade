@@ -13,19 +13,24 @@ export default function Popup() {
   useEffect(() => {
     if (!videoRef.current || !videoPort) return;
 
-    const videoElement = videoRef.current;
-    setIsPopupVisible(true);
+    const showPopupAndPrepareVideo = async () => {
+      setIsPopupVisible(true);
 
-    // Reiniciar el video al abrir el popup
-    resetVideo();
+      // Esperar a que el componente se actualice y el video esté en el DOM
+      await new Promise((resolve) => setTimeout(resolve, 50));
 
-    const playPromise = videoElement.play();
-
-    if (playPromise !== undefined) {
-      playPromise.catch((error) => {
-        console.error("Autoplay prevented:", error);
-      });
-    }
+      if (videoRef.current) {
+        await resetVideo();
+        try {
+          await videoRef.current.play();
+        } catch (error) {
+          console.error("Error en reproducción automática:", error);
+          // Fallback: Permitir al usuario iniciar la reproducción
+          videoRef.current.controls = true;
+        }
+      }
+    };
+    showPopupAndPrepareVideo();
   }, [videoPort]);
 
   useEffect(() => {
@@ -34,10 +39,14 @@ export default function Popup() {
     }
   }, [isPopupVisible]);
 
-  const resetVideo = () => {
+  const resetVideo = async () => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
-      videoRef.current.load();
+      // Usar un setTimeout para asegurar que el load() se complete
+      await new Promise((resolve) => {
+        videoRef.current.onloadedmetadata = resolve;
+        videoRef.current.load();
+      });
     }
   };
   const closePopup = () => {
@@ -86,6 +95,8 @@ export default function Popup() {
           autoPlay
           muted
           loop
+          preload="auto"
+          playsInline
         >
           <source src={videoPort} type="video/mp4" />
         </video>
