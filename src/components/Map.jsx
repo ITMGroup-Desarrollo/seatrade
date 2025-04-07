@@ -15,6 +15,7 @@ export default function Map() {
   // console.log(port.hoveredPort);
 
   const popup = document.getElementById("popup");
+  const staticInfo = document.getElementById("staticInfo");
 
   const changePort = (portId) => {
     port.setPort(portId);
@@ -24,7 +25,10 @@ export default function Map() {
 
   function mostrarPopup() {
     popup.classList.remove("hidden");
-    popup.classList.add("flex");
+    popup.classList.add("flex"); 
+    staticInfo.classList.remove("flex");
+    staticInfo.classList.add("hidden");
+
   }
   return (
     <svg
