@@ -1,8 +1,10 @@
-[![Open in Live](https://itmgroup.mx/seatrade/)
+# Seatrade Map ITM Ports
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Screen](/public/screen-web.png)
 
-![Screen](https://bitbucket.org/itmgroup/seatrade/src/main/public/images/screen-web.png)
+### View on live
+
+[Preview](https://itmgroup.mx/seatrade/)
 
 ## 🚀 Project Structure
 
@@ -40,6 +42,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## Develop
 
-Hafid Oxte
-Cristian Mendoza
-Claudia Morales
+- Hafid Oxte
+- Cristian Mendoza
+- Claudia Morales
