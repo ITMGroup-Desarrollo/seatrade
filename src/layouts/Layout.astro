@@ -13,6 +13,16 @@ import "../styles/global.css";
   </head>
   <body class="overflow-hidden">
     <slot />
+    <!-- <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/seatrade/sw.js")
+            .then((reg) => console.log("[SW] Registrado:", reg))
+            .catch((err) => console.error("[SW] Error:", err));
+        });
+      }
+    </script> -->
   </body>
 </html>
 
