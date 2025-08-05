@@ -31,14 +31,14 @@ export default function StaticInfoMap() {
     >
       <Card className="flex w-3/8 3xl:w-2/4 mr-5 3xl:mr-10">
         <div className="flex items-center">
-          <div className="text-3xl 3xl:text-5xl mr-2 text-white font-bold">
+          <div className="text-3xl md:text-xl 3xl:text-5xl mr-2 text-white font-bold">
             <AnimatedNumber key={`${key}-1`} value={1646} duration={1500} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-xs 3xl:text-xl text-[var(--color-blue-text)] leading-none">
+            <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
               Total
             </span>
-            <span className="text-xs 3xl:text-xl text-[var(--color-blue-text)] leading-none">
+            <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
               Calls
             </span>
           </div>
@@ -47,14 +47,14 @@ export default function StaticInfoMap() {
         <Separador className="mx-3 3xl:mx-10" />
 
         <div className="flex items-center">
-          <div className="text-3xl 3xl:text-5xl mr-2 text-white font-bold">
+          <div className="text-3xl md:text-xl 3xl:text-5xl mr-2 text-white font-bold">
             <AnimatedNumber key={`${key}-2`} value={6358445} duration={2200} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-xs 3xl:text-xl text-[var(--color-blue-text)] leading-none">
+            <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
               Total
             </span>
-            <span className="text-xs 3xl:text-xl text-[var(--color-blue-text)] leading-none">
+            <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
               pax
             </span>
           </div>
@@ -62,14 +62,14 @@ export default function StaticInfoMap() {
       </Card>
       <Card className="flex w-1/4 mr-5 3xl:mr-10">
         <div className="flex items-center">
-          <div className="text-3xl 3xl:text-5xl mr-2 text-white font-bold">
+          <div className="text-3xl md:text-xl 3xl:text-5xl mr-2 text-white font-bold">
             <AnimatedNumber key={`${key}-3`} value={7} duration={1000} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-xs 3xl:text-xl text-[var(--color-blue-text)] leading-none">
+            <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
               cruise port
             </span>
-            <span className="text-xs 3xl:text-xl text-[var(--color-blue-text)] leading-none">
+            <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
               destinations
             </span>
           </div>
@@ -78,11 +78,11 @@ export default function StaticInfoMap() {
         <Separador className="mx-2 3xl:mx-3" />
 
         <div className="flex items-center">
-          <div className="text-3xl 3xl:text-5xl mr-2 text-white font-bold">
+          <div className="text-3xl md:text-xl 3xl:text-5xl mr-2 text-white font-bold">
             <AnimatedNumber key={`${key}-4`} value={3} duration={700} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
-            <span className="text-xs 3xl:text-xl text-[var(--color-blue-text)] leading-none">
+            <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
               countries
             </span>
           </div>
@@ -100,7 +100,7 @@ export default function StaticInfoMap() {
           </div>
           <div>
             <div>
-              <p className="text-xs 3xl:text-base text-[var(--color-blue-text)] leading-none font-bold uppercase">
+              <p className="text-xs  3xl:text-base text-[var(--color-blue-text)] leading-none font-bold uppercase">
                 satisfaction rate
               </p>
             </div>

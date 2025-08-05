@@ -156,19 +156,19 @@ export default function Carousel() {
         >
           <p
             key={eventKey}
-            className="text-xs 3xl:text-xl font-semibold animate-fadeIn"
+            className="text-xs text-tiny 3xl:text-xl font-semibold animate-fadeIn"
           >
             {port.instagram}
           </p>
           <div>
             <img
               key={eventKey}
-              className="animate-fadeIn py-1 3xl:py-0 w-14 3xl:w-16"
+              className="animate-fadeIn py-1 3xl:py-0 w-14 md:w-10 3xl:w-16"
               src={port.qr}
               alt=""
             />
           </div>
-          <p className="uppercase text-xs 3xl:text-xl font-semibold animate-fadeIn">
+          <p className="uppercase text-xs text-tiny 3xl:text-xl font-semibold animate-fadeIn">
             Follow Us!
           </p>
         </Card>

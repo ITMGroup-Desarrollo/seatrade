@@ -50,7 +50,7 @@ export default function Arrivals() {
             />
           </div>
 
-          <div className="row-span-1 text-center content-center text-white font-bold text-3xl 3xl:text-5xl ">
+          <div className="row-span-1 text-center content-center text-white font-bold text-3xl md:text-2xl 3xl:text-5xl ">
             <Calls />
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function Arrivals() {
             </div>
             <RuedaPax key={eventKey} className="pax-container animate-fadeIn" />
           </div>
-          <div className="row-span-1 text-center content-center text-white font-semibold text-3xl 3xl:text-5xl">
+          <div className="row-span-1 text-center content-center text-white font-semibold text-3xl md:text-2xl 3xl:text-5xl">
             <Pax />
           </div>
         </div>
