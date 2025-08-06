@@ -16,11 +16,11 @@ import CubeAnimation from "./CubeAnimation";
   class="parent containerMap h-screen grid grid-rows-8 grid-cols-16 bg-cover bg-center overflow-hidden"
   style={`background-image: url(${BgMap.src});`}
 >
-  <div class="map row-span-5 col-span-13 relative h-full w-full">
+  <div class="map row-span-5 col-span-13 relative h-[full] w-full">
     <CubeAnimation client:only />
-    <div class="absolute top-0 left-0 w-screen h-screen z--1">
-  <Map client:only />
-</div>
+    <div id="map-container" class="absolute top-0 left-0 w-screen  z-0">
+      <Map client:only />
+    </div>
 
     <div
       class="hidden 3xl:flex absolute top-12 left-1/2 transform -translate-x-1/2"

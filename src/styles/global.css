@@ -235,3 +235,6 @@
 /* .happyFace{
   animation:pulseGlow 1.5s infinite ease-in-out;
 } */
+#map-container{
+  height: 90vh !important;
+}

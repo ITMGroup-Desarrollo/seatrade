@@ -234,8 +234,8 @@ export default function Map() {
       />
       <image
         id="roatan-logo"
-        x="550"
-        y="410"
+        x="540"
+        y="380"
         width="50"
         height="50"
         href={logoRoatan.src}
