@@ -45,7 +45,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/CM.mp4"
+    "video": "videos/SA.mp4"
   },
   "roatan": {
     "name": "Roatan",
@@ -92,7 +92,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/RT.mp4"
+    "video": "videos/SA.mp4"
   },
   "taino-bay": {
     "name": "Taino Bay",
@@ -142,7 +142,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/TB.mp4"
+    "video": "videos/SA.mp4"
   },
   "cabo-rojo": {
     "name": "Cabo Rojo",
@@ -192,7 +192,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/CR.mp4"
+    "video": "videos/SA.mp4"
   },
   "samana": {
     "name": "Samana",
@@ -283,7 +283,7 @@
     "slides": 6,
     "galleryClass": "col-span-10 rounded-r-xl",
     "socialDisplay": "hidden",
-    "video": "videos/LP.mp4"
+    "video": "videos/SA.mp4"
   },
   "la-baja": {
     "name": "La Baja",
@@ -328,14 +328,14 @@
     "slides": 6,
     "galleryClass": "col-span-10 rounded-r-xl",
     "socialDisplay": "hidden",
-    "video": "videos/LB.mp4"
+    "video": "videos/SA.mp4"
   },
     "melilla": {
     "name": "Melilla",
     "country": "Spain",
     "state": "Melilla",
-    "logo": "images/logos/logo-samana.svg",
-    "flag": "images/flags/bandera-sp.svg",
+    "logo": "images/logos/logo-melilla.svg",
+    "flag": "images/flags/bandera-mla.svg",
     "followers": "200",
     "instagram": "@portmelilla",
     "qr": "images/qrs/qrMelilla.svg",
