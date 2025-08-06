@@ -48,7 +48,7 @@ export default function StaticInfoMap() {
 
         <div className="flex items-center">
           <div className="text-3xl md:text-xl 3xl:text-5xl mr-2 text-white font-bold">
-            <AnimatedNumber key={`${key}-2`} value={6358445} duration={2200} />
+            <AnimatedNumber key={`${key}-2`} value={6411000} duration={2200} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
             <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
