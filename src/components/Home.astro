@@ -18,7 +18,10 @@ import CubeAnimation from "./CubeAnimation";
 >
   <div class="map row-span-5 col-span-13 relative h-full w-full">
     <CubeAnimation client:only />
-    <Map client:only />
+    <div class="absolute top-0 left-0 w-screen h-screen z--1">
+  <Map client:only />
+</div>
+
     <div
       class="hidden 3xl:flex absolute top-12 left-1/2 transform -translate-x-1/2"
     >
@@ -37,7 +40,7 @@ import CubeAnimation from "./CubeAnimation";
       </p>
     </div>
     <div
-      class="flex 3xl:hidden absolute top-6 left-1/2 transform -translate-x-1/2"
+      class="flex 3xl:hidden absolute top-12 left-1/2 transform -translate-x-1/2"
     >
       <p
         class="text-white text-5xl uppercase font-bold text-center drop-shadow-[2px_2px_4px_#000000ab] pl-8 whitespace-nowrap"
@@ -60,7 +63,7 @@ import CubeAnimation from "./CubeAnimation";
     <StaticInfoMap client:only />
     <Popup client:only />
   </div>
-  <div class="arrivals row-span-5 col-span-3 bg-transparent">
+  <div class="arrivals row-span-5 col-span-3 z-10 bg-transparent">
     <Arrivals client:only />
   </div>
   <div class="carousel row-span-3 col-span-16 bg-transparent z-10">

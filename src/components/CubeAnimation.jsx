@@ -12,23 +12,23 @@ export default function CubeAnimation() {
         angulo="90deg"
       />
       <Cube delay={0.3} bottom="5em" left="15em" height="45px" width="45px" />
-      <Cube
+      {/* <Cube
         delay={0.2}
         bottom="5em"
         left="35em"
         height="35px"
         width="35px"
         angulo="90deg"
-      />
+      /> */}
       <Cube
         delay={0.3}
         bottom="4em"
-        left="65em"
+        left="60em"
         height="45px"
         width="45px"
         angulo="90deg"
       />
-      <Cube delay={0.1} bottom="12em" right="15em" height="25px" width="25px" />
+      <Cube delay={0.1} bottom="7em" right="14em" height="25px" width="25px" />
       <Cube delay={0.2} bottom="8em" right="7em" height="45px" width="45px" />
       <Cube
         delay={0.3}
@@ -42,45 +42,45 @@ export default function CubeAnimation() {
       <Cube
         delay={0.1}
         bottom="8em"
-        right="28em"
+        right="45em"
         height="45px"
         width="45px"
         angulo="180deg"
       />
       <Cube
         delay={0.1}
-        bottom="15em"
-        right="1em"
+        bottom="12em"
+        left="42em"
         height="45px"
         width="45px"
         angulo="270deg"
       />
-      <Cube delay={0.2} bottom="18em" right="8em" height="35px" width="35px" />
+      <Cube delay={0.2} bottom="14em" right="8em" height="35px" width="35px" />
       <Cube
         delay={0.3}
-        bottom="22em"
-        right="15em"
+        bottom="20em"
+        left="20em"
         height="35px"
         width="35px"
         angulo="180deg"
       />
-      <Cube
+      {/* <Cube
         delay={0.3}
         bottom="28em"
         right="6em"
         height="25px"
         width="25px"
         angulo="270deg"
-      />
-      <Cube delay={0.1} bottom="34em" right="2em" height="45px" width="45px" />
-      <Cube
+      /> */}
+      <Cube delay={0.1} bottom="34em" right="48em" height="45px" width="45px" />
+      {/* <Cube
         delay={0.3}
         top="1em"
         right="15em"
         height="30px"
         width="30px"
         angulo="180deg"
-      />
+      /> */}
       <Cube
         delay={0.1}
         top="3em"
@@ -89,11 +89,11 @@ export default function CubeAnimation() {
         width="30px"
         angulo="270deg"
       />
-      <Cube delay={0.3} top="6em" right="23em" height="45px" width="45px" />
+      <Cube delay={0.3} top="6em" left="35em" height="45px" width="45px" />
       <Cube
         delay={0.2}
         top="6em"
-        right="35em"
+        right="42em"
         height="25px"
         width="25px"
         angulo="180deg"
@@ -107,14 +107,14 @@ export default function CubeAnimation() {
         angulo="270deg"
       />
       <Cube delay={0.1} top="16em" right="50em" height="45px" width="45px" />
-      <Cube
+      {/* <Cube
         delay={0.2}
         top="16em"
         right="30em"
         height="25px"
         width="25px"
         angulo="180deg"
-      />
+      /> */}
       <Cube
         delay={0.3}
         bottom="10em"
@@ -123,7 +123,7 @@ export default function CubeAnimation() {
         width="25px"
         angulo="90deg"
       />
-      <Cube delay={0.2} bottom="12em" left="25em" height="35px" width="35px" />
+      {/* <Cube delay={0.2} bottom="12em" left="25em" height="35px" width="35px" /> */}
       <Cube
         delay={0.1}
         bottom="18em"
@@ -132,31 +132,31 @@ export default function CubeAnimation() {
         width="35px"
         angulo="180deg"
       />
-      <Cube
+      {/* <Cube
         delay={0.1}
         bottom="24em"
         left="18em"
         height="45px"
         width="45px"
         angulo="270deg"
-      />
-      <Cube
+      /> */}
+      {/* <Cube
         delay={0.1}
         top="6em"
         left="10em"
         height="45px"
         width="45px"
         angulo="180deg"
-      />
-      <Cube delay={0.1} top="2em" left="2em" height="45px" width="45px" />
-      <Cube
+      /> */}
+      {/* <Cube delay={0.1} top="2em" left="2em" height="45px" width="45px" /> */}
+      {/* <Cube
         delay={0.1}
         top="20em"
         left="15em"
         height="30px"
         width="30px"
         angulo="270deg"
-      />
+      /> */}
     </>
   );
 }

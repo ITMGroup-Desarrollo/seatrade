@@ -9,7 +9,7 @@ import logoTainobay from "../assets/images/logo-tainobay.svg";
 import logoSamana from "../assets/images/logo-samana.svg";
 import logoLaPaz from "../assets/images/logo-lapaz.svg";
 import logoLaBaja from "../assets/images/logo-labaja.svg";
-import logoMelilla from "../assets/images/logo-labaja.svg";
+import logoMelilla from "../assets/images/logo-melilla.svg";
 
 export default function Map() {
   const port = usePort();
