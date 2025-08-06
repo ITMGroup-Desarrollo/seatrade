@@ -45,7 +45,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/SA.mp4"
+    "video": "videos/CM.mp4"
   },
   "roatan": {
     "name": "Roatan",
@@ -92,7 +92,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/SA.mp4"
+    "video": "videos/RT.mp4"
   },
   "taino-bay": {
     "name": "Taino Bay",
@@ -142,7 +142,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/SA.mp4"
+    "video": "videos/TB.mp4"
   },
   "cabo-rojo": {
     "name": "Cabo Rojo",
@@ -192,7 +192,7 @@
     "slides": 5,
     "galleryClass": "col-span-8",
     "socialDisplay": "",
-    "video": "videos/SA.mp4"
+    "video": "videos/CR.mp4"
   },
   "samana": {
     "name": "Samana",
@@ -283,7 +283,7 @@
     "slides": 6,
     "galleryClass": "col-span-10 rounded-r-xl",
     "socialDisplay": "hidden",
-    "video": "videos/SA.mp4"
+    "video": "videos/LP.mp4"
   },
   "la-baja": {
     "name": "La Baja",
@@ -328,7 +328,7 @@
     "slides": 6,
     "galleryClass": "col-span-10 rounded-r-xl",
     "socialDisplay": "hidden",
-    "video": "videos/SA.mp4"
+    "video": "videos/LB.mp4"
   },
     "melilla": {
     "name": "Melilla",
