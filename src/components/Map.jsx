@@ -354,7 +354,7 @@ export default function Map() {
       />
 
       {/* La Baja */}
-      <image
+      {/* <image
         id="la-baja-mark"
         x="105"
         y="220"
@@ -378,7 +378,7 @@ export default function Map() {
         style={{ cursor: "pointer" }}
         onMouseEnter={() => port.setHoveredPort("la-baja")}
         onMouseLeave={() => port.setHoveredPort(null)}
-      />
+      /> */}
       <image
         id="melilla-mark"
         x="1160"
