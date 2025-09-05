@@ -90,12 +90,12 @@ export default function Carousel() {
           </div>
         </Card> */}
         <Card className="flex">
-          <div className="justify-center self-center text-center rounded-xl h-full w-auto ">
+          <div className="flex flag justify-center self-center rounded-xl h-full w-auto ">
             <img
               src={port.flag}
               alt="dominican-flag"
               key={eventKey}
-              className="h-full w-auto animate-fadeIn"
+              className="h-[90%] w-auto self-center animate-fadeIn"
             />
           </div>
         </Card>
