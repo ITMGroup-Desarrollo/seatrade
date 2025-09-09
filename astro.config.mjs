@@ -15,5 +15,5 @@ export default defineConfig({
   build: {
     assets: "public/assets",
   },
-  base: "/seatrade-test/",
+  base: "/seatrade/",
 });
