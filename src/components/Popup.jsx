@@ -65,11 +65,13 @@ export default function Popup() {
       className="popup absolute z-[999999] top-0 left-0 w-full h-full justify-center items-center hidden pl-8 pt-4"
       style={{
         width:
-          port.name === "Samana" || port.name === "Melilla"
+          // port.name === "Samana" || port.name === "Melilla"
+          port.name === "Samana" 
             ? "100vw"
             : "",
         paddingRight:
-          port.name === "Samana" || port.name === "Melilla"
+          // port.name === "Samana" || port.name === "Melilla"
+          port.name === "Samana"
             ? "36px"
             : "",
       }}
