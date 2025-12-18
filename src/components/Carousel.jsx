@@ -99,13 +99,16 @@ export default function Carousel() {
             />
           </div>
         </Card>
-        <Card className="row-span-1 flex p-2">
+        <Card className="row-span-1 flex flex-col justify-center items-center p-2">
           <img
             key={eventKey}
             className="h-5/6 animate-fadeIn"
             src={port.logo}
             alt="logo-taino"
           />
+          {port.logo === "images/logos/logo-costamaya.svg" && (
+            <p className="text-[8px]">Costa Maya Operator</p>
+          )}
         </Card>
       </div>
       <div
