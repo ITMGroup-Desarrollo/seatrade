@@ -3,6 +3,13 @@ import Card from "./Card";
 import Separador from "./Separador";
 import AnimatedNumber from "../components/AnimatedNumber";
 import happyIcon from "../assets/images/icono-feliz.gif";
+import dataPorts from "../data/dataPorts.json";
+
+const portsArray = Object.values(dataPorts);
+
+const totalCalls = portsArray.reduce((sum, port) => sum + (port.calls || 0), 0);
+
+const totalPax = portsArray.reduce((sum, port) => sum + (port.pax || 0), 0);
 
 export default function StaticInfoMap() {
   const [key, setKey] = useState(0);
@@ -16,7 +23,7 @@ export default function StaticInfoMap() {
     const handlePopupClick = () => {
       if (staticInfo.classList.contains("hidden")) {
         staticInfo.classList.replace("hidden", "flex");
-        setKey((prevKey) => prevKey + 1); 
+        setKey((prevKey) => prevKey + 1);
       }
     };
 
@@ -32,7 +39,11 @@ export default function StaticInfoMap() {
       <Card className="flex w-3/8 3xl:w-2/4 mr-5 3xl:mr-10">
         <div className="flex items-center">
           <div className="text-3xl md:text-xl 3xl:text-5xl mr-2 text-white font-bold">
-            <AnimatedNumber key={`${key}-1`} value={1646} duration={1500} />
+            <AnimatedNumber
+              key={`${key}-1`}
+              value={totalCalls}
+              duration={1500}
+            />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
             <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
@@ -48,7 +59,7 @@ export default function StaticInfoMap() {
 
         <div className="flex items-center">
           <div className="text-3xl md:text-xl 3xl:text-5xl mr-2 text-white font-bold">
-            <AnimatedNumber key={`${key}-2`} value={6411000} duration={2200} />
+            <AnimatedNumber key={`${key}-2`} value={totalPax} duration={2200} />
           </div>
           <div className="flex flex-col uppercase font-bold mt-1">
             <span className="text-xs md:text-tiny 3xl:text-xl text-[var(--color-blue-text)] leading-none">
@@ -106,7 +117,8 @@ export default function StaticInfoMap() {
             <div className="flex uppercase font-bold">
               <div className="text-2xl 3xl:text-4xl mr-2 text-white font-bold leading-none">
                 <p className="leading-none">
-                  <AnimatedNumber key={`${key}-5`} value={96} duration={1500} />%
+                  <AnimatedNumber key={`${key}-5`} value={96} duration={1500} />
+                  %
                 </p>
               </div>
               <div className="flex flex-col justify-center">
