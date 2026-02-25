@@ -66,16 +66,11 @@ export default function Popup() {
       style={{
         width:
           // port.name === "Samana" || port.name === "Melilla"
-          port.name === "Samana" 
-            ? "100vw"
-            : "",
+          port.name === "Costa Maya" ? "100vw" : "",
         paddingRight:
           // port.name === "Samana" || port.name === "Melilla"
-          port.name === "Samana"
-            ? "36px"
-            : "",
+          port.name === "Costa Maya" ? "36px" : "",
       }}
-
     >
       <div className="popup-contenido bg-[var(--color-secondary)] p-5 rounded-xl text-center relative w-full h-full">
         <span
