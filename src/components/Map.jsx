@@ -500,7 +500,7 @@ export default function Map() {
       <path
         id="MX-BCN"
         className={` ${
-          port.port.name === "La Baja" || port.hoveredPort === "La Baja"
+          port.port.name === "Ensenada" || port.hoveredPort === "Ensenada"
             ? "state-active"
             : ""
         }`}
@@ -678,30 +678,30 @@ export default function Map() {
         onMouseLeave={() => port.setHoveredPort(null)}
       />
 
-      {/* La Baja */}
+      {/* Ensenada */}
       <image
-        id="la-baja-mark"
+        id="ensenada-mark"
         x="105"
         y="220"
         width="30"
         height="30"
         href={mapMarker.src}
-        onClick={() => changePort("la-baja")}
+        onClick={() => changePort("ensenada")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
-        onMouseEnter={() => port.setHoveredPort("la-baja")}
+        onMouseEnter={() => port.setHoveredPort("ensenada")}
         onMouseLeave={() => port.setHoveredPort(null)}
       />
       <image
-        id="la-baja-logo"
+        id="ensenada-logo"
         x="20"
         y="208"
         width="80"
         height="35"
         href={logoLaBaja.src}
-        onClick={() => changePort("la-baja")}
+        onClick={() => changePort("ensenada")}
         style={{ cursor: "pointer" }}
-        onMouseEnter={() => port.setHoveredPort("la-baja")}
+        onMouseEnter={() => port.setHoveredPort("ensenada")}
         onMouseLeave={() => port.setHoveredPort(null)}
       />
       <image

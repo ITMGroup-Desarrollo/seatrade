@@ -25,10 +25,9 @@ export default function Map() {
 
   function mostrarPopup() {
     popup.classList.remove("hidden");
-    popup.classList.add("flex"); 
+    popup.classList.add("flex");
     staticInfo.classList.remove("flex");
     staticInfo.classList.add("hidden");
-
   }
   return (
     <svg
@@ -1314,28 +1313,28 @@ export default function Map() {
 
       {/* La Baja */}
       <image
-        id="la-baja-mark"
+        id="ensenada-mark"
         x="88"
         y="500"
         width="30"
         height="30"
         href={mapMarker.src}
-        onClick={() => changePort("la-baja")}
+        onClick={() => changePort("ensenada")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
-        onMouseEnter={() => port.setHoveredPort("la-baja")}
+        onMouseEnter={() => port.setHoveredPort("ensenada")}
         onMouseLeave={() => port.setHoveredPort(null)}
       />
       <image
-        id="la-baja-logo"
+        id="ensenada-logo"
         x="4"
         y="508"
         width="80"
         height="35"
         href={logoLaBaja.src}
-        onClick={() => changePort("la-baja")}
+        onClick={() => changePort("ensenada")}
         style={{ cursor: "pointer" }}
-        onMouseEnter={() => port.setHoveredPort("la-baja")}
+        onMouseEnter={() => port.setHoveredPort("ensenada")}
         onMouseLeave={() => port.setHoveredPort(null)}
       />
     </svg>

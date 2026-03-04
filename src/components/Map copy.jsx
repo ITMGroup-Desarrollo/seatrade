@@ -515,28 +515,28 @@ export default function Maps() {
 
       {/* La Baja */}
       <image
-        id="la-baja-mark"
+        id="ensenada-mark"
         x="30"
         y="50"
         width="30"
         height="30"
         href={mapMarker.src}
-        onClick={() => changePort("la-baja")}
+        onClick={() => changePort("ensenada")}
         style={{ cursor: "pointer" }}
         className="icon-mark"
-        onMouseEnter={() => port.setHoveredPort("la-baja")}
+        onMouseEnter={() => port.setHoveredPort("ensenada")}
         onMouseLeave={() => port.setHoveredPort(null)}
       />
       <image
-        id="la-baja-logo"
+        id="ensenada-logo"
         x="-25"
         y="38"
         width="55"
         height="55"
         href={logoLaBaja.src}
-        onClick={() => changePort("la-baja")}
+        onClick={() => changePort("ensenada")}
         style={{ cursor: "pointer" }}
-        onMouseEnter={() => port.setHoveredPort("la-baja")}
+        onMouseEnter={() => port.setHoveredPort("ensenada")}
         onMouseLeave={() => port.setHoveredPort(null)}
       />
     </svg>
