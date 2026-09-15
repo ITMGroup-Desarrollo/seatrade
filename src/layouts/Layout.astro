@@ -10,6 +10,8 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>Seatrade Mapa</title>
+    {/* Preload del video del puerto por defecto — máxima prioridad para bajo internet */}
+    <link rel="preload" as="video" href="videos/CR.mp4" fetchpriority="high" />
   </head>
   <body class="overflow-hidden">
     <slot />

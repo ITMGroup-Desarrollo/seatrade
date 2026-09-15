@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import Card from "./Card";
 import usePort from "../hooks/use-port";
 import Separador from "./Separador";
+
+// Número de imágenes que se cargan inmediatamente (las visibles al inicio)
+const EAGER_SLIDES = 3;
 
 import logoInstagram from "../assets/instagram-white.svg";
 
@@ -127,6 +130,9 @@ export default function Carousel() {
                     src={image}
                     key={eventKey}
                     alt={`gallery-image-${index}`}
+                    loading={index < EAGER_SLIDES ? "eager" : "lazy"}
+                    decoding={index < EAGER_SLIDES ? "sync" : "async"}
+                    fetchpriority={index === 0 ? "low" : undefined}
                   />
                 </div>
               </div>

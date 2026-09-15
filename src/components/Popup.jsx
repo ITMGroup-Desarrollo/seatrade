@@ -10,6 +10,26 @@ export default function Popup() {
 
   const port = usePort((state) => state.port);
 
+  // Precargar el video con alta prioridad tan pronto como cambie el puerto
+  useEffect(() => {
+    if (!videoPort) return;
+
+    // Crear un link de preload para que el browser descargue el video antes que las imágenes
+    const existingPreload = document.querySelector('link[data-video-preload]');
+    if (existingPreload) existingPreload.remove();
+
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preload';
+    preloadLink.as = 'video';
+    preloadLink.href = videoPort;
+    preloadLink.setAttribute('data-video-preload', 'true');
+    document.head.appendChild(preloadLink);
+
+    return () => {
+      if (preloadLink.parentNode) preloadLink.remove();
+    };
+  }, [videoPort]);
+
   useEffect(() => {
     if (!videoRef.current || !videoPort) return;
 
@@ -101,6 +121,8 @@ export default function Popup() {
           loop
           preload="auto"
           playsInline
+          // Alta prioridad de fetch para que el browser lo descargue antes que las imágenes
+          fetchPriority="high"
         >
           <source src={videoPort} type="video/mp4" />
         </video>
